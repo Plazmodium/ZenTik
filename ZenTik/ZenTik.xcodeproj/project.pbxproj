@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2CCF386320C817A70094C06A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF386220C817A70094C06A /* AppDelegate.swift */; };
+		2CCF386520C817A70094C06A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF386420C817A70094C06A /* ViewController.swift */; };
+		2CCF386820C817A70094C06A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CCF386620C817A70094C06A /* Main.storyboard */; };
+		2CCF386A20C817A80094C06A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CCF386920C817A80094C06A /* Assets.xcassets */; };
+		2CCF386D20C817A80094C06A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CCF386B20C817A80094C06A /* LaunchScreen.storyboard */; };
+		2CCF387820C817A80094C06A /* ZenTikTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF387720C817A80094C06A /* ZenTikTests.swift */; };
+		2CCF388320C817A80094C06A /* ZenTikUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF388220C817A80094C06A /* ZenTikUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2CCF387420C817A80094C06A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CCF385720C817A70094C06A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CCF385E20C817A70094C06A;
+			remoteInfo = ZenTik;
+		};
+		2CCF387F20C817A80094C06A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CCF385720C817A70094C06A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CCF385E20C817A70094C06A;
+			remoteInfo = ZenTik;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2CCF385F20C817A70094C06A /* ZenTik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZenTik.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CCF386220C817A70094C06A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2CCF386420C817A70094C06A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2CCF386720C817A70094C06A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2CCF386920C817A80094C06A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2CCF386C20C817A80094C06A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2CCF386E20C817A80094C06A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CCF387320C817A80094C06A /* ZenTikTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZenTikTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CCF387720C817A80094C06A /* ZenTikTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenTikTests.swift; sourceTree = "<group>"; };
+		2CCF387920C817A80094C06A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CCF387E20C817A80094C06A /* ZenTikUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZenTikUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CCF388220C817A80094C06A /* ZenTikUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenTikUITests.swift; sourceTree = "<group>"; };
+		2CCF388420C817A80094C06A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2CCF385C20C817A70094C06A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CCF387020C817A80094C06A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CCF387B20C817A80094C06A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2CCF385620C817A70094C06A = {
+			isa = PBXGroup;
+			children = (
+				2CCF386120C817A70094C06A /* ZenTik */,
+				2CCF387620C817A80094C06A /* ZenTikTests */,
+				2CCF388120C817A80094C06A /* ZenTikUITests */,
+				2CCF386020C817A70094C06A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2CCF386020C817A70094C06A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2CCF385F20C817A70094C06A /* ZenTik.app */,
+				2CCF387320C817A80094C06A /* ZenTikTests.xctest */,
+				2CCF387E20C817A80094C06A /* ZenTikUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2CCF386120C817A70094C06A /* ZenTik */ = {
+			isa = PBXGroup;
+			children = (
+				2CCF386220C817A70094C06A /* AppDelegate.swift */,
+				2CCF386420C817A70094C06A /* ViewController.swift */,
+				2CCF386620C817A70094C06A /* Main.storyboard */,
+				2CCF386920C817A80094C06A /* Assets.xcassets */,
+				2CCF386B20C817A80094C06A /* LaunchScreen.storyboard */,
+				2CCF386E20C817A80094C06A /* Info.plist */,
+			);
+			path = ZenTik;
+			sourceTree = "<group>";
+		};
+		2CCF387620C817A80094C06A /* ZenTikTests */ = {
+			isa = PBXGroup;
+			children = (
+				2CCF387720C817A80094C06A /* ZenTikTests.swift */,
+				2CCF387920C817A80094C06A /* Info.plist */,
+			);
+			path = ZenTikTests;
+			sourceTree = "<group>";
+		};
+		2CCF388120C817A80094C06A /* ZenTikUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2CCF388220C817A80094C06A /* ZenTikUITests.swift */,
+				2CCF388420C817A80094C06A /* Info.plist */,
+			);
+			path = ZenTikUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2CCF385E20C817A70094C06A /* ZenTik */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CCF388720C817A80094C06A /* Build configuration list for PBXNativeTarget "ZenTik" */;
+			buildPhases = (
+				2CCF385B20C817A70094C06A /* Sources */,
+				2CCF385C20C817A70094C06A /* Frameworks */,
+				2CCF385D20C817A70094C06A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZenTik;
+			productName = ZenTik;
+			productReference = 2CCF385F20C817A70094C06A /* ZenTik.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2CCF387220C817A80094C06A /* ZenTikTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CCF388A20C817A80094C06A /* Build configuration list for PBXNativeTarget "ZenTikTests" */;
+			buildPhases = (
+				2CCF386F20C817A80094C06A /* Sources */,
+				2CCF387020C817A80094C06A /* Frameworks */,
+				2CCF387120C817A80094C06A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CCF387520C817A80094C06A /* PBXTargetDependency */,
+			);
+			name = ZenTikTests;
+			productName = ZenTikTests;
+			productReference = 2CCF387320C817A80094C06A /* ZenTikTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2CCF387D20C817A80094C06A /* ZenTikUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CCF388D20C817A80094C06A /* Build configuration list for PBXNativeTarget "ZenTikUITests" */;
+			buildPhases = (
+				2CCF387A20C817A80094C06A /* Sources */,
+				2CCF387B20C817A80094C06A /* Frameworks */,
+				2CCF387C20C817A80094C06A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CCF388020C817A80094C06A /* PBXTargetDependency */,
+			);
+			name = ZenTikUITests;
+			productName = ZenTikUITests;
+			productReference = 2CCF387E20C817A80094C06A /* ZenTikUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2CCF385720C817A70094C06A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Wodwo;
+				TargetAttributes = {
+					2CCF385E20C817A70094C06A = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					2CCF387220C817A80094C06A = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 2CCF385E20C817A70094C06A;
+					};
+					2CCF387D20C817A80094C06A = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 2CCF385E20C817A70094C06A;
+					};
+				};
+			};
+			buildConfigurationList = 2CCF385A20C817A70094C06A /* Build configuration list for PBXProject "ZenTik" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2CCF385620C817A70094C06A;
+			productRefGroup = 2CCF386020C817A70094C06A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2CCF385E20C817A70094C06A /* ZenTik */,
+				2CCF387220C817A80094C06A /* ZenTikTests */,
+				2CCF387D20C817A80094C06A /* ZenTikUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2CCF385D20C817A70094C06A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CCF386D20C817A80094C06A /* LaunchScreen.storyboard in Resources */,
+				2CCF386A20C817A80094C06A /* Assets.xcassets in Resources */,
+				2CCF386820C817A70094C06A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CCF387120C817A80094C06A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CCF387C20C817A80094C06A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2CCF385B20C817A70094C06A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CCF386520C817A70094C06A /* ViewController.swift in Sources */,
+				2CCF386320C817A70094C06A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CCF386F20C817A80094C06A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CCF387820C817A80094C06A /* ZenTikTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CCF387A20C817A80094C06A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CCF388320C817A80094C06A /* ZenTikUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2CCF387520C817A80094C06A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CCF385E20C817A70094C06A /* ZenTik */;
+			targetProxy = 2CCF387420C817A80094C06A /* PBXContainerItemProxy */;
+		};
+		2CCF388020C817A80094C06A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CCF385E20C817A70094C06A /* ZenTik */;
+			targetProxy = 2CCF387F20C817A80094C06A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2CCF386620C817A70094C06A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CCF386720C817A70094C06A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2CCF386B20C817A80094C06A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CCF386C20C817A80094C06A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2CCF388520C817A80094C06A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2CCF388620C817A80094C06A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2CCF388820C817A80094C06A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JNHBJ3JE68;
+				INFOPLIST_FILE = ZenTik/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.za.wodwo.ZenTik;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2CCF388920C817A80094C06A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JNHBJ3JE68;
+				INFOPLIST_FILE = ZenTik/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.za.wodwo.ZenTik;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2CCF388B20C817A80094C06A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JNHBJ3JE68;
+				INFOPLIST_FILE = ZenTikTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.za.wodwo.ZenTikTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZenTik.app/ZenTik";
+			};
+			name = Debug;
+		};
+		2CCF388C20C817A80094C06A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JNHBJ3JE68;
+				INFOPLIST_FILE = ZenTikTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.za.wodwo.ZenTikTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZenTik.app/ZenTik";
+			};
+			name = Release;
+		};
+		2CCF388E20C817A80094C06A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JNHBJ3JE68;
+				INFOPLIST_FILE = ZenTikUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.za.wodwo.ZenTikUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZenTik;
+			};
+			name = Debug;
+		};
+		2CCF388F20C817A80094C06A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JNHBJ3JE68;
+				INFOPLIST_FILE = ZenTikUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.za.wodwo.ZenTikUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZenTik;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2CCF385A20C817A70094C06A /* Build configuration list for PBXProject "ZenTik" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CCF388520C817A80094C06A /* Debug */,
+				2CCF388620C817A80094C06A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CCF388720C817A80094C06A /* Build configuration list for PBXNativeTarget "ZenTik" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CCF388820C817A80094C06A /* Debug */,
+				2CCF388920C817A80094C06A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CCF388A20C817A80094C06A /* Build configuration list for PBXNativeTarget "ZenTikTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CCF388B20C817A80094C06A /* Debug */,
+				2CCF388C20C817A80094C06A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CCF388D20C817A80094C06A /* Build configuration list for PBXNativeTarget "ZenTikUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CCF388E20C817A80094C06A /* Debug */,
+				2CCF388F20C817A80094C06A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2CCF385720C817A70094C06A /* Project object */;
+}
