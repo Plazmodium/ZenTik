@@ -14,6 +14,10 @@
 		2CCF386D20C817A80094C06A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CCF386B20C817A80094C06A /* LaunchScreen.storyboard */; };
 		2CCF387820C817A80094C06A /* ZenTikTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF387720C817A80094C06A /* ZenTikTests.swift */; };
 		2CCF388320C817A80094C06A /* ZenTikUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF388220C817A80094C06A /* ZenTikUITests.swift */; };
+		2CCF389520C8216A0094C06A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF389420C8216A0094C06A /* MainViewModel.swift */; };
+		2CCF389720C8235C0094C06A /* GetCurrencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF389620C8235C0094C06A /* GetCurrencies.swift */; };
+		2CCF389A20C831ED0094C06A /* Cryptos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF389920C831ED0094C06A /* Cryptos.swift */; };
+		2CCF389C20C835010094C06A /* Exchanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF389B20C835010094C06A /* Exchanges.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		2CCF387E20C817A80094C06A /* ZenTikUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZenTikUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CCF388220C817A80094C06A /* ZenTikUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenTikUITests.swift; sourceTree = "<group>"; };
 		2CCF388420C817A80094C06A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CCF389420C8216A0094C06A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		2CCF389620C8235C0094C06A /* GetCurrencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrencies.swift; sourceTree = "<group>"; };
+		2CCF389920C831ED0094C06A /* Cryptos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cryptos.swift; sourceTree = "<group>"; };
+		2CCF389B20C835010094C06A /* Exchanges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exchanges.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +105,10 @@
 		2CCF386120C817A70094C06A /* ZenTik */ = {
 			isa = PBXGroup;
 			children = (
+				2CCF389220C81AA00094C06A /* Application */,
+				2CCF389120C81A920094C06A /* Platform */,
+				2CCF389020C81A840094C06A /* Domain */,
 				2CCF386220C817A70094C06A /* AppDelegate.swift */,
-				2CCF386420C817A70094C06A /* ViewController.swift */,
 				2CCF386620C817A70094C06A /* Main.storyboard */,
 				2CCF386920C817A80094C06A /* Assets.xcassets */,
 				2CCF386B20C817A80094C06A /* LaunchScreen.storyboard */,
@@ -123,6 +133,48 @@
 				2CCF388420C817A80094C06A /* Info.plist */,
 			);
 			path = ZenTikUITests;
+			sourceTree = "<group>";
+		};
+		2CCF389020C81A840094C06A /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				2CCF389820C831B80094C06A /* Models */,
+				2CCF389620C8235C0094C06A /* GetCurrencies.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		2CCF389120C81A920094C06A /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		2CCF389220C81AA00094C06A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				2CCF389320C81FED0094C06A /* Scenes */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		2CCF389320C81FED0094C06A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				2CCF386420C817A70094C06A /* ViewController.swift */,
+				2CCF389420C8216A0094C06A /* MainViewModel.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		2CCF389820C831B80094C06A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2CCF389920C831ED0094C06A /* Cryptos.swift */,
+				2CCF389B20C835010094C06A /* Exchanges.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +309,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CCF386520C817A70094C06A /* ViewController.swift in Sources */,
+				2CCF389720C8235C0094C06A /* GetCurrencies.swift in Sources */,
+				2CCF389A20C831ED0094C06A /* Cryptos.swift in Sources */,
 				2CCF386320C817A70094C06A /* AppDelegate.swift in Sources */,
+				2CCF389C20C835010094C06A /* Exchanges.swift in Sources */,
+				2CCF389520C8216A0094C06A /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
