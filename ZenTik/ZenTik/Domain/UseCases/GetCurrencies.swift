@@ -1,5 +1,5 @@
 //
-//  Exchanges.swift
+//  GetCurrencies.swift
 //  ZenTik
 //
 //  Created by Gabor Racz on 2018/06/06.
@@ -8,9 +8,6 @@
 
 import Foundation
 
-struct Exchanges{
-    
-    var exchange_id:String!
-    var website:String!
-    var name:String!
+protocol GetCurrencies {
+    func GetTheCryptoCurrencies() -> [CryptoModel]
 }

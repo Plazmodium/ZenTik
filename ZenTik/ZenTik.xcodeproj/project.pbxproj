@@ -16,8 +16,13 @@
 		2CCF388320C817A80094C06A /* ZenTikUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF388220C817A80094C06A /* ZenTikUITests.swift */; };
 		2CCF389520C8216A0094C06A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF389420C8216A0094C06A /* MainViewModel.swift */; };
 		2CCF389720C8235C0094C06A /* GetCurrencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF389620C8235C0094C06A /* GetCurrencies.swift */; };
-		2CCF389A20C831ED0094C06A /* Cryptos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF389920C831ED0094C06A /* Cryptos.swift */; };
-		2CCF389C20C835010094C06A /* Exchanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF389B20C835010094C06A /* Exchanges.swift */; };
+		2CCF389A20C831ED0094C06A /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF389920C831ED0094C06A /* CryptoModel.swift */; };
+		2CCF389C20C835010094C06A /* ExchangeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF389B20C835010094C06A /* ExchangeModel.swift */; };
+		2CD9CA8220CA7D25001F43E4 /* CryptoParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9CA8120CA7D25001F43E4 /* CryptoParser.swift */; };
+		2CD9CA8520CA873E001F43E4 /* GetExchanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9CA8420CA873E001F43E4 /* GetExchanges.swift */; };
+		2CD9CA8720CA87A6001F43E4 /* ExchangeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9CA8620CA87A6001F43E4 /* ExchangeParser.swift */; };
+		2CD9CA8A20CAACA0001F43E4 /* GetAssetsNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9CA8920CAACA0001F43E4 /* GetAssetsNetwork.swift */; };
+		2CD9CA8C20CAAF31001F43E4 /* GetCurrenciesConcrete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9CA8B20CAAF31001F43E4 /* GetCurrenciesConcrete.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +58,13 @@
 		2CCF388420C817A80094C06A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CCF389420C8216A0094C06A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		2CCF389620C8235C0094C06A /* GetCurrencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrencies.swift; sourceTree = "<group>"; };
-		2CCF389920C831ED0094C06A /* Cryptos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cryptos.swift; sourceTree = "<group>"; };
-		2CCF389B20C835010094C06A /* Exchanges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exchanges.swift; sourceTree = "<group>"; };
+		2CCF389920C831ED0094C06A /* CryptoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoModel.swift; sourceTree = "<group>"; };
+		2CCF389B20C835010094C06A /* ExchangeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeModel.swift; sourceTree = "<group>"; };
+		2CD9CA8120CA7D25001F43E4 /* CryptoParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoParser.swift; sourceTree = "<group>"; };
+		2CD9CA8420CA873E001F43E4 /* GetExchanges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetExchanges.swift; sourceTree = "<group>"; };
+		2CD9CA8620CA87A6001F43E4 /* ExchangeParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeParser.swift; sourceTree = "<group>"; };
+		2CD9CA8920CAACA0001F43E4 /* GetAssetsNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAssetsNetwork.swift; sourceTree = "<group>"; };
+		2CD9CA8B20CAAF31001F43E4 /* GetCurrenciesConcrete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrenciesConcrete.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,8 +148,8 @@
 		2CCF389020C81A840094C06A /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				2CD9CA7F20CA7954001F43E4 /* UseCases */,
 				2CCF389820C831B80094C06A /* Models */,
-				2CCF389620C8235C0094C06A /* GetCurrencies.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -147,6 +157,9 @@
 		2CCF389120C81A920094C06A /* Platform */ = {
 			isa = PBXGroup;
 			children = (
+				2CD9CA8820CAAAD6001F43E4 /* UseCasesConcrete */,
+				2CD9CA8320CA86D8001F43E4 /* NetworkCalls */,
+				2CD9CA8020CA7D13001F43E4 /* JSONParsers */,
 			);
 			path = Platform;
 			sourceTree = "<group>";
@@ -171,10 +184,44 @@
 		2CCF389820C831B80094C06A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2CCF389920C831ED0094C06A /* Cryptos.swift */,
-				2CCF389B20C835010094C06A /* Exchanges.swift */,
+				2CCF389920C831ED0094C06A /* CryptoModel.swift */,
+				2CCF389B20C835010094C06A /* ExchangeModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2CD9CA7F20CA7954001F43E4 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				2CCF389620C8235C0094C06A /* GetCurrencies.swift */,
+				2CD9CA8420CA873E001F43E4 /* GetExchanges.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		2CD9CA8020CA7D13001F43E4 /* JSONParsers */ = {
+			isa = PBXGroup;
+			children = (
+				2CD9CA8120CA7D25001F43E4 /* CryptoParser.swift */,
+				2CD9CA8620CA87A6001F43E4 /* ExchangeParser.swift */,
+			);
+			path = JSONParsers;
+			sourceTree = "<group>";
+		};
+		2CD9CA8320CA86D8001F43E4 /* NetworkCalls */ = {
+			isa = PBXGroup;
+			children = (
+				2CD9CA8920CAACA0001F43E4 /* GetAssetsNetwork.swift */,
+			);
+			path = NetworkCalls;
+			sourceTree = "<group>";
+		};
+		2CD9CA8820CAAAD6001F43E4 /* UseCasesConcrete */ = {
+			isa = PBXGroup;
+			children = (
+				2CD9CA8B20CAAF31001F43E4 /* GetCurrenciesConcrete.swift */,
+			);
+			path = UseCasesConcrete;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,11 +355,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CD9CA8A20CAACA0001F43E4 /* GetAssetsNetwork.swift in Sources */,
 				2CCF386520C817A70094C06A /* ViewController.swift in Sources */,
 				2CCF389720C8235C0094C06A /* GetCurrencies.swift in Sources */,
-				2CCF389A20C831ED0094C06A /* Cryptos.swift in Sources */,
+				2CD9CA8720CA87A6001F43E4 /* ExchangeParser.swift in Sources */,
+				2CCF389A20C831ED0094C06A /* CryptoModel.swift in Sources */,
+				2CD9CA8520CA873E001F43E4 /* GetExchanges.swift in Sources */,
+				2CD9CA8C20CAAF31001F43E4 /* GetCurrenciesConcrete.swift in Sources */,
 				2CCF386320C817A70094C06A /* AppDelegate.swift in Sources */,
-				2CCF389C20C835010094C06A /* Exchanges.swift in Sources */,
+				2CCF389C20C835010094C06A /* ExchangeModel.swift in Sources */,
+				2CD9CA8220CA7D25001F43E4 /* CryptoParser.swift in Sources */,
 				2CCF389520C8216A0094C06A /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
