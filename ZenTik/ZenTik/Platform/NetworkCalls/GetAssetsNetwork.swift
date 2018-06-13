@@ -9,7 +9,7 @@
 import Foundation
 
 enum Result<Value> {
-    case success([Value])
+    case success(Value)
     case failure(Error)
 }
 
@@ -17,20 +17,20 @@ enum Result<Value> {
 public class GetAssetsNetwork<T>{
     
     
-    func getAssets(for endPoint: String,  completionHandler:@escaping (T) -> Void) {
+    func getAssets(for apiKey: String,  completionHandler:@escaping (Result<(T)>) -> Void) {
         
-        var urlComponents = URLComponents()
-        urlComponents.scheme = "https"
-        urlComponents.host = "rest.coinapi.io/v1.assets"
-        urlComponents.path = "/posts"
-        let userIdItem = URLQueryItem(name: "apiKey", value: "\(endPoint)")
-        urlComponents.queryItems = [userIdItem]
-        guard let url = urlComponents.url
-            else {
-                fatalError("Could not create URL from components")
-        }
+//        var urlComponents = URLComponents()
+//        urlComponents.scheme = "https"
+//        urlComponents.host = "rest.coinapi.io/v1"
+//        urlComponents.path = "/assets"
+//        let userIdItem = URLQueryItem(name: "apikey", value: "\(apiKey)")
+//        urlComponents.queryItems = [userIdItem]
+//        guard let url = urlComponents.url
+//            else {
+//                fatalError("Could not create URL from components")
+//        }
         
-        var request = URLRequest(url: url)
+        var request = URLRequest(url: URL(string:"https://rest.coinapi.io/v1/assets/apikey=\(apiKey)")!)
         request.httpMethod = "GET"
         
         let config = URLSessionConfiguration.default
@@ -38,8 +38,8 @@ public class GetAssetsNetwork<T>{
         let task = session.dataTask(with: request) { (responseData, response, responseError) in
             DispatchQueue.main.async {
                 if let error = responseError {
-                    completionHandler(error as! T)
-//                    completionHandler(.failure(error))
+//                    completionHandler(error as! T)
+                    completionHandler(.failure(error))
                 } else if let jsonData = responseData {
                     // Now we have jsonData, Data representation of the JSON returned to us
                     // from our URLRequest...
@@ -52,18 +52,20 @@ public class GetAssetsNetwork<T>{
                         // We would use Post.self for JSON representing a single Post
                         // object, and [Post].self for JSON representing an array of
                         // Post objects
-                        let assets = try decoder.decode(CryptoParser.self, from: jsonData)
-                        let cryptoModelData = CryptoModel(cryptoParserData: assets)
+                        let assets = try decoder.decode([CryptoParser].self, from: jsonData)
+                        print(assets)
+//                        let cryptoModelData = CryptoModel(cryptoParserData: assets)
                         
-                        completionHandler(cryptoModelData as! T)
+//                        completionHandler(cryptoModelData as! T)
+                        completionHandler(.success(assets as! T))
                     } catch {
-                        completionHandler("error" as! T)
-//                        completionHandler?(.failure(error))
+//                        completionHandler("error" as! T)
+                        completionHandler(.failure(error))
                     }
                 } else {
                     let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : "Data was not retrieved from request"])
-//                    completionHandler!(.failure(error))
-                    completionHandler(error as! T)
+                    completionHandler(.failure(error))
+//                    completionHandler(error as! T)
                 }
             }
         }
