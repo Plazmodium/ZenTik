@@ -8,18 +8,24 @@
 
 import Foundation
 
-public struct CryptoModel{
+public class CryptoModel:NSObject{
     
     let asset_id: String!
     let name: String!
     let isCrypto: Int!
     
-    public init(assest_id:String,
+    init(assest_id:String,
                 name:String,
                 isCrypto:Int) {
-        
+
         self.asset_id = assest_id
         self.name = name
         self.isCrypto = isCrypto
+    }
+    
+    init(cryptoParserData:CryptoParser){
+        self.asset_id = cryptoParserData.assetID
+        self.name = cryptoParserData.name
+        self.isCrypto = cryptoParserData.typeIsCrypto
     }
 }

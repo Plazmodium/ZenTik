@@ -8,13 +8,13 @@
 
 import Foundation
 
-final class GetCurrenciesConcrete : GetCurrencies{
-    
-    
-    
-    
-    
-    func GetTheCryptoCurrencies() -> [CryptoModel] {
-        <#code#>
-    }
-}
+//final class GetCurrenciesConcrete : GetCurrencies{
+//    
+//    
+//    
+//    
+//    
+//    func GetTheCryptoCurrencies() -> [CryptoModel] {
+//        
+//    }
+//}

@@ -12,9 +12,9 @@
 
 import Foundation
 
-//typealias Exchanges = [Exchange]
+//typealias Exchanges = [ExchangeParser]
 
-class Exchange: Codable {
+class ExchangeParser: Codable {
     let exchangeID, website, name, dataStart: String
     let dataEnd: String
     let dataQuoteStart, dataQuoteEnd, dataOrderbookStart, dataOrderbookEnd: String?
