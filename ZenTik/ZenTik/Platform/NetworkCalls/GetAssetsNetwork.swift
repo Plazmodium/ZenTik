@@ -54,18 +54,13 @@ public class GetAssetsNetwork<T>{
                         // object, and [Post].self for JSON representing an array of
                         // Post objects
                         let assets = try decoder.decode([CryptoParser].self, from: jsonData)
-//                        let cryptoModelData = CryptoModel(cryptoParserData: assets)
-                        
-//                        completionHandler(cryptoModelData as! T)
                         completionHandler(.success(assets as! [T]))
                     } catch {
-//                        completionHandler("error" as! T)
                         completionHandler(.failure(error))
                     }
                 } else {
                     let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : "Data was not retrieved from request"])
                     completionHandler(.failure(error))
-//                    completionHandler(error as! T)
                 }
             }
         }
