@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol GetCurrencies {
-    func GetTheCryptoCurrencies() -> [CryptoModel]
+public protocol GetCurrencies {
+    func GetTheCryptoCurrencies(apiKey:String) -> [CryptoModel]
 }

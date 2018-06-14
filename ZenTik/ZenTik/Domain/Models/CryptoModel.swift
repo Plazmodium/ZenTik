@@ -8,12 +8,12 @@
 
 import Foundation
 
-public class CryptoModel:NSObject{
-    
+public class CryptoModel{
+
     let asset_id: String!
     let name: String!
     let isCrypto: Int!
-    
+
     init(assest_id:String,
                 name:String,
                 isCrypto:Int) {
@@ -22,10 +22,13 @@ public class CryptoModel:NSObject{
         self.name = name
         self.isCrypto = isCrypto
     }
-    
+
     init(cryptoParserData:CryptoParser){
         self.asset_id = cryptoParserData.assetID
         self.name = cryptoParserData.name
         self.isCrypto = cryptoParserData.typeIsCrypto
     }
+
+
 }
+

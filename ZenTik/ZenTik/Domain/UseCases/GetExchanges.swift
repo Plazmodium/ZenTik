@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol GetExchanges {
+public protocol GetExchanges {
     func GetTheExchanges() -> [ExchangeModel]
 }

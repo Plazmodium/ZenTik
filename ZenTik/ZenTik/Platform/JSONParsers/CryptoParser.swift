@@ -90,5 +90,24 @@ struct CryptoParser: Codable {
         case dataTradeCount = "data_trade_count"
         case dataSymbolsCount = "data_symbols_count"
     }
+    
+//    init(from decoder: Decoder) throws {
+//
+//        let values = try decoder.container(keyedBy: CodingKeys.self)
+//
+//        assetID = try values.decode(String.self, forKey: .assetID)
+//        name = try values.decode(String.self, forKey: .name)
+//        typeIsCrypto = try values.decode(Int.self, forKey: .typeIsCrypto)
+//        dataStart = try values.decode(String.self, forKey: .dataStart)
+//        dataEnd = try values.decode(String.self, forKey: .dataEnd)
+//        dataQuoteStart = try values.decode(String.self, forKey: .dataQuoteStart)
+//        dataQuoteEnd = try values.decode(String.self, forKey: .dataQuoteEnd)
+//        dataOrderbookStart = try values.decode(String.self, forKey: .dataOrderbookStart)
+//        dataOrderbookEnd = try values.decode(String.self, forKey: .dataOrderbookEnd)
+//        dataTradeStart = try values.decode(String.self, forKey: .dataTradeStart)
+//        dataTradeEnd = try values.decode(String.self, forKey: .dataTradeEnd)
+//        dataTradeCount = try values.decode(Int.self, forKey: .dataTradeCount)
+//        dataSymbolsCount = try values.decode(Int.self, forKey: .dataSymbolsCount)
+//    }
 }
 

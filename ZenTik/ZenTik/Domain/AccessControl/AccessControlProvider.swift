@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+public protocol AccessControlProvider{
+    
+    func getCurrencies() -> GetCurrencies
+}

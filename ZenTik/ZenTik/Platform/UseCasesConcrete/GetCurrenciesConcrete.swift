@@ -24,7 +24,8 @@ final class GetCurrenciesConcrete : GetCurrencies{
             switch results{
                 
             case .success(let assets):
-                self.assetDataModel = assets
+                print(assets)
+//                self.assetDataModel = assets
             case .failure(let error):
                 //                 fatalError("error: \(error.localizedDescription)")
                 print(error.localizedDescription)

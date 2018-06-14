@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C80241820D2674C000AE7C8 /* AccessControlProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C80241720D2674C000AE7C8 /* AccessControlProvider.swift */; };
+		2C80241B20D267ED000AE7C8 /* AccessControlProviderConcrete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C80241A20D267ED000AE7C8 /* AccessControlProviderConcrete.swift */; };
 		2CCF386320C817A70094C06A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF386220C817A70094C06A /* AppDelegate.swift */; };
 		2CCF386520C817A70094C06A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF386420C817A70094C06A /* ViewController.swift */; };
 		2CCF386820C817A70094C06A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CCF386620C817A70094C06A /* Main.storyboard */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C80241720D2674C000AE7C8 /* AccessControlProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessControlProvider.swift; sourceTree = "<group>"; };
+		2C80241A20D267ED000AE7C8 /* AccessControlProviderConcrete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessControlProviderConcrete.swift; sourceTree = "<group>"; };
 		2CCF385F20C817A70094C06A /* ZenTik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZenTik.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CCF386220C817A70094C06A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CCF386420C817A70094C06A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +96,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C80241620D2671A000AE7C8 /* AccessControl */ = {
+			isa = PBXGroup;
+			children = (
+				2C80241720D2674C000AE7C8 /* AccessControlProvider.swift */,
+			);
+			path = AccessControl;
+			sourceTree = "<group>";
+		};
+		2C80241920D267D1000AE7C8 /* AccessControlProviderConcrete */ = {
+			isa = PBXGroup;
+			children = (
+				2C80241A20D267ED000AE7C8 /* AccessControlProviderConcrete.swift */,
+			);
+			path = AccessControlProviderConcrete;
+			sourceTree = "<group>";
+		};
 		2CCF385620C817A70094C06A = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +168,7 @@
 		2CCF389020C81A840094C06A /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				2C80241620D2671A000AE7C8 /* AccessControl */,
 				2CD9CA7F20CA7954001F43E4 /* UseCases */,
 				2CCF389820C831B80094C06A /* Models */,
 			);
@@ -157,6 +178,7 @@
 		2CCF389120C81A920094C06A /* Platform */ = {
 			isa = PBXGroup;
 			children = (
+				2C80241920D267D1000AE7C8 /* AccessControlProviderConcrete */,
 				2CD9CA8820CAAAD6001F43E4 /* UseCasesConcrete */,
 				2CD9CA8320CA86D8001F43E4 /* NetworkCalls */,
 				2CD9CA8020CA7D13001F43E4 /* JSONParsers */,
@@ -359,11 +381,13 @@
 				2CCF386520C817A70094C06A /* ViewController.swift in Sources */,
 				2CCF389720C8235C0094C06A /* GetCurrencies.swift in Sources */,
 				2CD9CA8720CA87A6001F43E4 /* ExchangeParser.swift in Sources */,
+				2C80241820D2674C000AE7C8 /* AccessControlProvider.swift in Sources */,
 				2CCF389A20C831ED0094C06A /* CryptoModel.swift in Sources */,
 				2CD9CA8520CA873E001F43E4 /* GetExchanges.swift in Sources */,
 				2CD9CA8C20CAAF31001F43E4 /* GetCurrenciesConcrete.swift in Sources */,
 				2CCF386320C817A70094C06A /* AppDelegate.swift in Sources */,
 				2CCF389C20C835010094C06A /* ExchangeModel.swift in Sources */,
+				2C80241B20D267ED000AE7C8 /* AccessControlProviderConcrete.swift in Sources */,
 				2CD9CA8220CA7D25001F43E4 /* CryptoParser.swift in Sources */,
 				2CCF389520C8216A0094C06A /* MainViewModel.swift in Sources */,
 			);

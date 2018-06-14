@@ -17,20 +17,21 @@ enum Result<Value> {
 public class GetAssetsNetwork<T>{
     
     
-    func getAssets(for apiKey: String,  completionHandler:@escaping (Result<(T)>) -> Void) {
+    func getAssets(for apiKey: String,  completionHandler: @escaping (Result<([T])>) -> Void) {
         
-//        var urlComponents = URLComponents()
-//        urlComponents.scheme = "https"
-//        urlComponents.host = "rest.coinapi.io/v1"
-//        urlComponents.path = "/assets"
-//        let userIdItem = URLQueryItem(name: "apikey", value: "\(apiKey)")
-//        urlComponents.queryItems = [userIdItem]
-//        guard let url = urlComponents.url
-//            else {
-//                fatalError("Could not create URL from components")
-//        }
-        
-        var request = URLRequest(url: URL(string:"https://rest.coinapi.io/v1/assets/apikey=\(apiKey)")!)
+        var urlComponents = URLComponents()
+        urlComponents.scheme = "https"
+        urlComponents.host = "rest.coinapi.io"
+        urlComponents.path = "/v1/assets"
+        let userIdItem = URLQueryItem(name: "apikey", value: "\(apiKey)")
+        urlComponents.queryItems = [userIdItem]
+        guard let url = urlComponents.url
+            else {
+                fatalError("Could not create URL from components")
+        }
+//        var url = URL(string:"https://rest.coinapi.io/v1/assets/apikey=\(apiKey)")!
+        print(url)
+        var request = URLRequest(url: url)
         request.httpMethod = "GET"
         
         let config = URLSessionConfiguration.default
@@ -53,11 +54,10 @@ public class GetAssetsNetwork<T>{
                         // object, and [Post].self for JSON representing an array of
                         // Post objects
                         let assets = try decoder.decode([CryptoParser].self, from: jsonData)
-                        print(assets)
 //                        let cryptoModelData = CryptoModel(cryptoParserData: assets)
                         
 //                        completionHandler(cryptoModelData as! T)
-                        completionHandler(.success(assets as! T))
+                        completionHandler(.success(assets as! [T]))
                     } catch {
 //                        completionHandler("error" as! T)
                         completionHandler(.failure(error))
