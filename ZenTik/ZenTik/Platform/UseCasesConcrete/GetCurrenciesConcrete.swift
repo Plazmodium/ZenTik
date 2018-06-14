@@ -8,13 +8,28 @@
 
 import Foundation
 
-//final class GetCurrenciesConcrete : GetCurrencies{
-//    
-//    
-//    
-//    
-//    
-//    func GetTheCryptoCurrencies() -> [CryptoModel] {
-//        
-//    }
-//}
+final class GetCurrenciesConcrete : GetCurrencies{
+    
+    let makeAssetsNetworkCall: GetAssetsNetwork<CryptoModel>
+    var assetDataModel = [CryptoModel]()
+    
+    init(assetsNetworkCall: GetAssetsNetwork<CryptoModel>){
+        self.makeAssetsNetworkCall = assetsNetworkCall
+    }
+    
+    func GetTheCryptoCurrencies(apiKey apikey:String) -> [CryptoModel] {
+        
+        self.makeAssetsNetworkCall.getAssets(for: apikey, completionHandler: { (results) in
+
+            switch results{
+                
+            case .success(let assets):
+                self.assetDataModel = assets
+            case .failure(let error):
+                //                 fatalError("error: \(error.localizedDescription)")
+                print(error.localizedDescription)
+            }
+        })
+        return self.assetDataModel
+    }
+}
