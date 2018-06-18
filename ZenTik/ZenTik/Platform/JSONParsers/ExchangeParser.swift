@@ -4,11 +4,6 @@
 //
 //  Created by Gabor Racz on 2018/06/08.
 //  Copyright © 2018 Wodwo. All rights reserved.
-//
-
-// To parse the JSON, add this file to your project and do:
-//
-//   let exchanges = try? JSONDecoder().decode(Exchanges.self, from: jsonData)
 
 import Foundation
 

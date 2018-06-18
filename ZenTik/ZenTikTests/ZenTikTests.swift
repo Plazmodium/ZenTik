@@ -57,8 +57,6 @@ class ZenTikTests: XCTestCase {
             responseError = error
             statusCode = (response as? HTTPURLResponse)?.statusCode
             
-            
-            
             if let error = error {
                 XCTFail("Error: \(error.localizedDescription)")
                 return

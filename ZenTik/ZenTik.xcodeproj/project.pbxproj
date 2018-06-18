@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2C80241820D2674C000AE7C8 /* AccessControlProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C80241720D2674C000AE7C8 /* AccessControlProvider.swift */; };
 		2C80241B20D267ED000AE7C8 /* AccessControlProviderConcrete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C80241A20D267ED000AE7C8 /* AccessControlProviderConcrete.swift */; };
+		2CB9CF2620D7B95400E28AAE /* MainViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9CF2520D7B95400E28AAE /* MainViewTableViewCell.swift */; };
 		2CCF386320C817A70094C06A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF386220C817A70094C06A /* AppDelegate.swift */; };
 		2CCF386520C817A70094C06A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF386420C817A70094C06A /* ViewController.swift */; };
 		2CCF386820C817A70094C06A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CCF386620C817A70094C06A /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		2C80241720D2674C000AE7C8 /* AccessControlProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessControlProvider.swift; sourceTree = "<group>"; };
 		2C80241A20D267ED000AE7C8 /* AccessControlProviderConcrete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessControlProviderConcrete.swift; sourceTree = "<group>"; };
+		2CB9CF2520D7B95400E28AAE /* MainViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewTableViewCell.swift; sourceTree = "<group>"; };
 		2CCF385F20C817A70094C06A /* ZenTik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZenTik.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CCF386220C817A70094C06A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CCF386420C817A70094C06A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 			children = (
 				2CCF386420C817A70094C06A /* ViewController.swift */,
 				2CCF389420C8216A0094C06A /* MainViewModel.swift */,
+				2CB9CF2520D7B95400E28AAE /* MainViewTableViewCell.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				2CCF386320C817A70094C06A /* AppDelegate.swift in Sources */,
 				2CCF389C20C835010094C06A /* ExchangeModel.swift in Sources */,
 				2C80241B20D267ED000AE7C8 /* AccessControlProviderConcrete.swift in Sources */,
+				2CB9CF2620D7B95400E28AAE /* MainViewTableViewCell.swift in Sources */,
 				2CD9CA8220CA7D25001F43E4 /* CryptoParser.swift in Sources */,
 				2CCF389520C8216A0094C06A /* MainViewModel.swift in Sources */,
 			);

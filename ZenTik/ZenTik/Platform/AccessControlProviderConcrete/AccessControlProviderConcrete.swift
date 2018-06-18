@@ -11,7 +11,7 @@ import Foundation
 public final class AccessControlProviderConcrete: AccessControlProvider{
     
     public func getCurrencies() -> GetCurrencies {
-        let x = GetAssetsNetwork<CryptoModel>()
-        return GetCurrenciesConcrete(assetsNetworkCall: x)
+        let getAssetsNetwork = GetAssetsNetwork<CryptoModel>()
+        return GetCurrenciesConcrete(assetsNetworkCall: getAssetsNetwork)
     }
 }

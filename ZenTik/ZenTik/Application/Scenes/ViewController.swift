@@ -27,6 +27,7 @@ class ViewController: UIViewController {
                 print(i.name)
                 print(i.asset_id)
                 print(i.isCrypto)
+                print(i.dateStarted)
             }
         }
     }

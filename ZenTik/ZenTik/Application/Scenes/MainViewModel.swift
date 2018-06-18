@@ -22,9 +22,7 @@ final public class MainViewModel{
         
 //        let theAssetsData = getCurrenciesUseCase.GetTheCryptoCurrencies(apiKey: apiKey)
 //        self.cryptoModel = theAssetsData
-        
-        
-        
+
         getAssets.getAssets(for: apiKey) { (result) in
 
             switch result{
@@ -33,13 +31,17 @@ final public class MainViewModel{
                 let parsedData = assets as! [CryptoParser]
                 
                 for i in parsedData{
-                    let model = CryptoModel(assest_id: i.assetID, name: i.name, isCrypto: i.typeIsCrypto)
+                    
+                    let model = CryptoModel(assest_id: i.assetID,
+                                            name: i.name,
+                                            isCrypto: i.typeIsCrypto,
+                                            dateStarted:i.dataStart)
+                    
                     self.cryptoModel.append(model)
                 }
                 completionHandler(self.cryptoModel)
 
             case .failure(let error):
-//                 fatalError("error: \(error.localizedDescription)")
                 print(error.localizedDescription)
             }
         }
