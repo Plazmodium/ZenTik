@@ -14,7 +14,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var cryptoTableView: UITableView!
     
     //MARK: PROPERTIES
-    var cryptoModel = [CryptoModel]()
+    var cryptoModel = [CryptoModelCryptoCompare]()
     var mainViewModel = MainViewModel()
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,7 +31,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func launchNetworkCall() {
 
-        mainViewModel.getTheAssets(apiKey: "71B66932-911E-42E3-BC37-862D30F51883") { (data) in
+        mainViewModel.getTheAssets() { (data) in
             self.cryptoModel = data
             self.cryptoTableView.reloadData()
         }
@@ -50,9 +50,35 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let cryptoCell = tableView.dequeueReusableCell(withIdentifier: "MainViewCell") as! MainViewTableViewCell
         
-        cryptoCell.cryptoName.text = cryptoModel[indexPath.row].name
-        cryptoCell.cryptoAbbreviation.text = cryptoModel[indexPath.row].asset_id
-        cryptoCell.cryptoInceptionDate.text = cryptoModel[indexPath.row].dateStarted
+        let urls = "https://www.cryptocompare.com\(cryptoModel[indexPath.row].imageURL ?? "" )"
+        
+        cryptoCell.cryptoName.text = cryptoModel[indexPath.row].coinName
+        cryptoCell.cryptoAbbreviation.text = cryptoModel[indexPath.row].symbol
+        cryptoCell.algorithm.text = cryptoModel[indexPath.row].algorithm
+        cryptoCell.cryptoProofType.text = cryptoModel[indexPath.row].proofType
+        cryptoCell.fullyPremined.text = cryptoModel[indexPath.row].fullyPremined
+        cryptoCell.preminedValue.text = cryptoModel[indexPath.row].preMinedValue
+        cryptoCell.totalCoinSupply.text = cryptoModel[indexPath.row].totalCoinSupply
+        cryptoCell.totalCoinsFreeFloating.text = cryptoModel[indexPath.row].totalCoinsFreeFloat
+        cryptoCell.cryptoImage.downloadedFrom(link: urls)
+        
+        if(cryptoModel[indexPath.row].sponsored == true){
+            cryptoCell.cryptoSponsored.text = "YES"
+            cryptoCell.cryptoSponsored.textColor = UIColor.green
+            
+        }else{
+            cryptoCell.cryptoSponsored.text = "NO"
+            cryptoCell.cryptoSponsored.textColor = UIColor.red
+        }
+        
+        if(cryptoModel[indexPath.row].isTrading == true){
+            cryptoCell.cryptoTrading.text = "YES"
+            cryptoCell.cryptoTrading.textColor = UIColor.green
+            
+        }else{
+            cryptoCell.cryptoTrading.text = "NO"
+            cryptoCell.cryptoTrading.textColor = UIColor.red
+        }
         
         return cryptoCell
     }
@@ -60,12 +86,33 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 
         var height = CGFloat()
-        height = 114.00
+        height = 271.00
 
         return height
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+}
+
+extension UIImageView {
+    func downloadedFrom(url: URL, contentMode mode: UIViewContentMode = .scaleAspectFit) {
+        contentMode = mode
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+                else { return }
+            DispatchQueue.main.async() {
+                self.image = image
+            }
+            }.resume()
+    }
+    func downloadedFrom(link: String, contentMode mode: UIViewContentMode = .scaleAspectFit) {
+        guard let url = URL(string: link) else { return }
+        downloadedFrom(url: url, contentMode: mode)
     }
 }

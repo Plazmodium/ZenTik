@@ -10,6 +10,8 @@
 		2C80241820D2674C000AE7C8 /* AccessControlProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C80241720D2674C000AE7C8 /* AccessControlProvider.swift */; };
 		2C80241B20D267ED000AE7C8 /* AccessControlProviderConcrete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C80241A20D267ED000AE7C8 /* AccessControlProviderConcrete.swift */; };
 		2CB9CF2620D7B95400E28AAE /* MainViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9CF2520D7B95400E28AAE /* MainViewTableViewCell.swift */; };
+		2CB9CF2820D8F3A500E28AAE /* CryptoParserCryptoCompare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9CF2720D8F3A500E28AAE /* CryptoParserCryptoCompare.swift */; };
+		2CB9CF2A20D900E800E28AAE /* GetAssetsCryptoCompare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9CF2920D900E800E28AAE /* GetAssetsCryptoCompare.swift */; };
 		2CCF386320C817A70094C06A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF386220C817A70094C06A /* AppDelegate.swift */; };
 		2CCF386520C817A70094C06A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF386420C817A70094C06A /* ViewController.swift */; };
 		2CCF386820C817A70094C06A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CCF386620C817A70094C06A /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 		2C80241720D2674C000AE7C8 /* AccessControlProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessControlProvider.swift; sourceTree = "<group>"; };
 		2C80241A20D267ED000AE7C8 /* AccessControlProviderConcrete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessControlProviderConcrete.swift; sourceTree = "<group>"; };
 		2CB9CF2520D7B95400E28AAE /* MainViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewTableViewCell.swift; sourceTree = "<group>"; };
+		2CB9CF2720D8F3A500E28AAE /* CryptoParserCryptoCompare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoParserCryptoCompare.swift; sourceTree = "<group>"; };
+		2CB9CF2920D900E800E28AAE /* GetAssetsCryptoCompare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAssetsCryptoCompare.swift; sourceTree = "<group>"; };
 		2CCF385F20C817A70094C06A /* ZenTik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZenTik.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CCF386220C817A70094C06A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CCF386420C817A70094C06A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -229,6 +233,7 @@
 			children = (
 				2CD9CA8120CA7D25001F43E4 /* CryptoParser.swift */,
 				2CD9CA8620CA87A6001F43E4 /* ExchangeParser.swift */,
+				2CB9CF2720D8F3A500E28AAE /* CryptoParserCryptoCompare.swift */,
 			);
 			path = JSONParsers;
 			sourceTree = "<group>";
@@ -237,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				2CD9CA8920CAACA0001F43E4 /* GetAssetsNetwork.swift */,
+				2CB9CF2920D900E800E28AAE /* GetAssetsCryptoCompare.swift */,
 			);
 			path = NetworkCalls;
 			sourceTree = "<group>";
@@ -382,6 +388,7 @@
 			files = (
 				2CD9CA8A20CAACA0001F43E4 /* GetAssetsNetwork.swift in Sources */,
 				2CCF386520C817A70094C06A /* ViewController.swift in Sources */,
+				2CB9CF2A20D900E800E28AAE /* GetAssetsCryptoCompare.swift in Sources */,
 				2CCF389720C8235C0094C06A /* GetCurrencies.swift in Sources */,
 				2CD9CA8720CA87A6001F43E4 /* ExchangeParser.swift in Sources */,
 				2C80241820D2674C000AE7C8 /* AccessControlProvider.swift in Sources */,
@@ -391,6 +398,7 @@
 				2CCF386320C817A70094C06A /* AppDelegate.swift in Sources */,
 				2CCF389C20C835010094C06A /* ExchangeModel.swift in Sources */,
 				2C80241B20D267ED000AE7C8 /* AccessControlProviderConcrete.swift in Sources */,
+				2CB9CF2820D8F3A500E28AAE /* CryptoParserCryptoCompare.swift in Sources */,
 				2CB9CF2620D7B95400E28AAE /* MainViewTableViewCell.swift in Sources */,
 				2CD9CA8220CA7D25001F43E4 /* CryptoParser.swift in Sources */,
 				2CCF389520C8216A0094C06A /* MainViewModel.swift in Sources */,

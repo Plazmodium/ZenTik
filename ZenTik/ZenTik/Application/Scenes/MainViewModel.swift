@@ -10,42 +10,56 @@ import Foundation
 
 final public class MainViewModel{
     
-    let getAssets = GetAssetsNetwork<Any>()
-    var cryptoModel = [CryptoModel]()
-//    let getCurrenciesUseCase:GetCurrenciesConcrete
-//
-//    init(getCurrenciesUseCase:GetCurrenciesConcrete){
-//        self.getCurrenciesUseCase = getCurrenciesUseCase
-//    }
+    let getAssets = GetAssetsCryptoCompare<Any>()
+    var cryptoModel = [CryptoModelCryptoCompare]()
+    var datum = [Datum]()
+    //    let getCurrenciesUseCase:GetCurrenciesConcrete
+    //
+    //    init(getCurrenciesUseCase:GetCurrenciesConcrete){
+    //        self.getCurrenciesUseCase = getCurrenciesUseCase
+    //    }
     
-    func getTheAssets(apiKey:String, completionHandler:@escaping([CryptoModel]) -> Void) {
+    func getTheAssets(completionHandler:@escaping([CryptoModelCryptoCompare]) -> Void) {
         
-//        let theAssetsData = getCurrenciesUseCase.GetTheCryptoCurrencies(apiKey: apiKey)
-//        self.cryptoModel = theAssetsData
-
-        getAssets.getAssets(for: apiKey) { (result) in
-
+        //        let theAssetsData = getCurrenciesUseCase.GetTheCryptoCurrencies(apiKey: apiKey)
+        //        self.cryptoModel = theAssetsData
+        
+        getAssets.getAssets() { (result) in
+            
             switch result{
-
-            case .success(let assets):
-                let parsedData = assets as! [CryptoParser]
                 
-                //MARK: FILTER DATA - ONLY SHOW CRYPTO, NOT FIAT
-                let filteredData = parsedData.filter({ (cryptoParsedData) -> Bool in
-                    cryptoParsedData.typeIsCrypto == 1
+            case .success(let assets):
+                
+                let parsedData = assets as! CryptoParserCryptoCompare
+                parsedData.data.forEach({ (key,value) in
+                    
+                    self.datum.append(value)
                 })
                 
-                for i in filteredData{
-                    let model = CryptoModel(assest_id: i.assetID,
-                                            name: i.name,
-                                            isCrypto: i.typeIsCrypto,
-                                            dateStarted:i.dataStart ?? "No Data")
+                for i in self.datum{
+                    
+                    let model = CryptoModelCryptoCompare(id: i.id,
+                                                         url: i.url,
+                                                         imageURL: i.imageURL,
+                                                         name: i.name,
+                                                         symbol: i.symbol,
+                                                         coinName: i.coinName,
+                                                         fullName: i.fullName,
+                                                         algorithm: i.algorithm,
+                                                         proofType: i.proofType,
+                                                         fullyPremined: i.fullyPremined,
+                                                         totalCoinSupply: i.totalCoinSupply,
+                                                         preMinedValue: i.preMinedValue.rawValue,
+                                                         totalCoinsFreeFloat: i.totalCoinsFreeFloat.rawValue,
+                                                         sortOrder: i.sortOrder,
+                                                         sponsored: i.sponsored,
+                                                         isTrading: i.isTrading)
                     
                     self.cryptoModel.append(model)
                 }
                 
                 completionHandler(self.cryptoModel)
-
+                
             case .failure(let error):
                 print(error.localizedDescription)
             }
