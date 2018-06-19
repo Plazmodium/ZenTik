@@ -5,12 +5,11 @@ import Foundation
 struct CryptoParser: Codable {
     let assetID, name: String
     let typeIsCrypto: Int
-    let dataStart, dataEnd: String
-    let dataQuoteStart, dataQuoteEnd, dataOrderbookStart, dataOrderbookEnd: String?
-    let dataTradeStart, dataTradeEnd: String?
+    let dataStart, dataEnd, dataQuoteStart, dataQuoteEnd: String?
+    let dataOrderbookStart, dataOrderbookEnd, dataTradeStart, dataTradeEnd: String?
     let dataTradeCount: Int?
     let dataSymbolsCount: Int
-
+    
     enum CodingKeys: String, CodingKey {
         case assetID = "asset_id"
         case name

@@ -10,10 +10,10 @@ import Foundation
 
 public class CryptoModel{
 
-    let asset_id: String!
-    let name: String!
-    let isCrypto: Int!
-    let dateStarted: String!
+    let asset_id: String
+    let name: String
+    let isCrypto: Int
+    let dateStarted: String?
 
     init(assest_id:String,
                 name:String,
@@ -26,13 +26,13 @@ public class CryptoModel{
         self.dateStarted = dateStarted
     }
 
-    init(cryptoParserData:CryptoParser){
-        self.asset_id = cryptoParserData.assetID
-        self.name = cryptoParserData.name
-        self.isCrypto = cryptoParserData.typeIsCrypto
-        self.dateStarted = cryptoParserData.dataStart
-        
-    }
+//    init(cryptoParserData:CryptoParser){
+//        self.asset_id = cryptoParserData.assetID
+//        self.name = cryptoParserData.name
+//        self.isCrypto = cryptoParserData.typeIsCrypto
+//        self.dateStarted = cryptoParserData.dataStart
+//
+//    }
 
 
 }

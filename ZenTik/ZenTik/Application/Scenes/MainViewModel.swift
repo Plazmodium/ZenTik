@@ -30,15 +30,20 @@ final public class MainViewModel{
             case .success(let assets):
                 let parsedData = assets as! [CryptoParser]
                 
-                for i in parsedData{
-                    
+                //MARK: FILTER DATA - ONLY SHOW CRYPTO, NOT FIAT
+                let filteredData = parsedData.filter({ (cryptoParsedData) -> Bool in
+                    cryptoParsedData.typeIsCrypto == 1
+                })
+                
+                for i in filteredData{
                     let model = CryptoModel(assest_id: i.assetID,
                                             name: i.name,
                                             isCrypto: i.typeIsCrypto,
-                                            dateStarted:i.dataStart)
+                                            dateStarted:i.dataStart ?? "No Data")
                     
                     self.cryptoModel.append(model)
                 }
+                
                 completionHandler(self.cryptoModel)
 
             case .failure(let error):

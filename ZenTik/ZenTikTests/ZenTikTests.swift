@@ -46,8 +46,6 @@ class ZenTikTests: XCTestCase {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         
-        
-        
         let promise = expectation(description: "Status code: 200")
         var responseError : Error?
         var statusCode : Int?
