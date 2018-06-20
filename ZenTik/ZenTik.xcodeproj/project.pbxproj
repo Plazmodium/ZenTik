@@ -29,6 +29,7 @@
 		2CD9CA8720CA87A6001F43E4 /* ExchangeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9CA8620CA87A6001F43E4 /* ExchangeParser.swift */; };
 		2CD9CA8A20CAACA0001F43E4 /* GetAssetsNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9CA8920CAACA0001F43E4 /* GetAssetsNetwork.swift */; };
 		2CD9CA8C20CAAF31001F43E4 /* GetCurrenciesConcrete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9CA8B20CAAF31001F43E4 /* GetCurrenciesConcrete.swift */; };
+		2CFEE1D920DA800D007512C0 /* GetAssetsCryptoCompareTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFEE1D820DA800D007512C0 /* GetAssetsCryptoCompareTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		2CD9CA8620CA87A6001F43E4 /* ExchangeParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeParser.swift; sourceTree = "<group>"; };
 		2CD9CA8920CAACA0001F43E4 /* GetAssetsNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAssetsNetwork.swift; sourceTree = "<group>"; };
 		2CD9CA8B20CAAF31001F43E4 /* GetCurrenciesConcrete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrenciesConcrete.swift; sourceTree = "<group>"; };
+		2CFEE1D820DA800D007512C0 /* GetAssetsCryptoCompareTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAssetsCryptoCompareTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 		2CCF387620C817A80094C06A /* ZenTikTests */ = {
 			isa = PBXGroup;
 			children = (
+				2CFEE1D820DA800D007512C0 /* GetAssetsCryptoCompareTest.swift */,
 				2CCF387720C817A80094C06A /* ZenTikTests.swift */,
 				2CCF387920C817A80094C06A /* Info.plist */,
 			);
@@ -421,6 +424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CFEE1D920DA800D007512C0 /* GetAssetsCryptoCompareTest.swift in Sources */,
 				2CCF387820C817A80094C06A /* ZenTikTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
