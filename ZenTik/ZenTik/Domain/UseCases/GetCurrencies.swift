@@ -8,6 +8,6 @@
 
 import Foundation
 
-public protocol GetCurrencies {
-    func GetTheCryptoCurrencies(apiKey:String) -> [CryptoModel]
+protocol GetCurrencies {
+    func GetTheCryptoCurrencies(for apikey:String, completionHandler: @escaping ([CryptoModel]) -> Void)
 }

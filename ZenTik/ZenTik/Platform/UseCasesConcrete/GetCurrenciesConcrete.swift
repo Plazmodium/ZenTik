@@ -10,14 +10,14 @@ import Foundation
 
 final class GetCurrenciesConcrete : GetCurrencies{
     
-    let makeAssetsNetworkCall: GetAssetsNetwork<CryptoModel>
+    let makeAssetsNetworkCall = GetAssetsNetwork<CryptoParser>()
     var assetDataModel = [CryptoModel]()
     
-    init(assetsNetworkCall: GetAssetsNetwork<CryptoModel>){
-        self.makeAssetsNetworkCall = assetsNetworkCall
-    }
+//    init(assetsNetworkCall: GetAssetsNetwork<CryptoModel>){
+//        self.makeAssetsNetworkCall = assetsNetworkCall
+//    }
     
-    func GetTheCryptoCurrencies(apiKey apikey:String) -> [CryptoModel] {
+    func GetTheCryptoCurrencies(for apikey:String, completionHandler: @escaping ([CryptoModel]) -> Void) {
         
         self.makeAssetsNetworkCall.getAssets(for: apikey, completionHandler: { (results) in
 
@@ -25,12 +25,20 @@ final class GetCurrenciesConcrete : GetCurrencies{
                 
             case .success(let assets):
                
-                self.assetDataModel = assets
+                for i in assets{
+                    
+                    self.assetDataModel = [CryptoModel(assest_id: i.assetID,
+                                                       name: i.name,
+                                                       isCrypto: i.typeIsCrypto,
+                                                       dateStarted: i.dataTradeStart ?? "No data")]
+                }
+                
+                completionHandler(self.assetDataModel)
+                
             case .failure(let error):
-                //                 fatalError("error: \(error.localizedDescription)")
-                print(error.localizedDescription)
+                fatalError("error: \(error.localizedDescription)")
+//                print(error.localizedDescription)
             }
         })
-        return self.assetDataModel
     }
 }

@@ -12,17 +12,25 @@ final public class MainViewModel{
     
     let getAssets = GetAssetsCryptoCompare<Any>()
     var cryptoModel = [CryptoModelCryptoCompare]()
+    
+    var cryptoModelCoinAPI = [CryptoModel]()
     var datum = [Datum]()
-    //    let getCurrenciesUseCase:GetCurrenciesConcrete
+    var getCurrenciesUseCase = GetCurrenciesConcrete()
     //
     //    init(getCurrenciesUseCase:GetCurrenciesConcrete){
     //        self.getCurrenciesUseCase = getCurrenciesUseCase
     //    }
     
+    
+    func getAssetsFromCoinIOAPI(apiKey:String){
+
+        getCurrenciesUseCase.GetTheCryptoCurrencies(for: apiKey) { (data) in
+            self.cryptoModelCoinAPI = data
+            
+        }
+    }
+    
     func getTheAssets(completionHandler:@escaping([CryptoModelCryptoCompare]) -> Void) {
-        
-        //        let theAssetsData = getCurrenciesUseCase.GetTheCryptoCurrencies(apiKey: apiKey)
-        //        self.cryptoModel = theAssetsData
         
         getAssets.getAssets() { (result) in
             

@@ -18,7 +18,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var mainViewModel = MainViewModel()
     
     override func viewWillAppear(_ animated: Bool) {
-        launchNetworkCall()
+        
+        //launchNetworkCall()
+        launchCoinIONetwork()
     }
     
     override func viewDidLoad() {
@@ -29,12 +31,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.cryptoTableView.dataSource = self
     }
     
+   @objc func launchCoinIONetwork(){
+        mainViewModel.getAssetsFromCoinIOAPI(apiKey: "71B66932-911E-42E3-BC37-862D30F51883")
+       let x = mainViewModel.cryptoModelCoinAPI
+    }
+    
     func launchNetworkCall() {
 
         mainViewModel.getTheAssets() { (data) in
             self.cryptoModel = data
             self.cryptoTableView.reloadData()
         }
+        
+//       let x = mainViewModel.getAssetsFromCoinIOAPI()
     }
     
     //MARK: TABLEVIEW DELEGATES
