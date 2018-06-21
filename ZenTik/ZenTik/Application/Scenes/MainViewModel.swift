@@ -16,17 +16,13 @@ final public class MainViewModel{
     var cryptoModelCoinAPI = [CryptoModel]()
     var datum = [Datum]()
     var getCurrenciesUseCase = GetCurrenciesConcrete()
-    //
-    //    init(getCurrenciesUseCase:GetCurrenciesConcrete){
-    //        self.getCurrenciesUseCase = getCurrenciesUseCase
-    //    }
+    var postNotificationOfData = NotificationCenter.default
     
     
     func getAssetsFromCoinIOAPI(apiKey:String){
 
         getCurrenciesUseCase.GetTheCryptoCurrencies(for: apiKey) { (data) in
             self.cryptoModelCoinAPI = data
-            
         }
     }
     

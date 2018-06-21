@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class CryptoModel{
+public class CryptoModel:NSObject{
 
     let asset_id: String
     let name: String

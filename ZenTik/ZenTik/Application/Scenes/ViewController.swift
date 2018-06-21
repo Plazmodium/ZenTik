@@ -31,9 +31,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.cryptoTableView.dataSource = self
     }
     
-   @objc func launchCoinIONetwork(){
+   func launchCoinIONetwork(){
         mainViewModel.getAssetsFromCoinIOAPI(apiKey: "71B66932-911E-42E3-BC37-862D30F51883")
-       let x = mainViewModel.cryptoModelCoinAPI
     }
     
     func launchNetworkCall() {

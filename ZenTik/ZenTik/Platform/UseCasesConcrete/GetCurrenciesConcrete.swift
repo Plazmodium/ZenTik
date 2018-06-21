@@ -27,10 +27,12 @@ final class GetCurrenciesConcrete : GetCurrencies{
                
                 for i in assets{
                     
-                    self.assetDataModel = [CryptoModel(assest_id: i.assetID,
+                    let model = CryptoModel(assest_id: i.assetID,
                                                        name: i.name,
                                                        isCrypto: i.typeIsCrypto,
-                                                       dateStarted: i.dataTradeStart ?? "No data")]
+                                                       dateStarted: i.dataTradeStart ?? "No data")
+                    
+                    self.assetDataModel.append(model)
                 }
                 
                 completionHandler(self.assetDataModel)

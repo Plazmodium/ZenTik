@@ -53,6 +53,7 @@ public class GetAssetsNetwork<T>{
                         // object, and [Post].self for JSON representing an array of
                         // Post objects
                         let assets = try decoder.decode([CryptoParser].self, from: jsonData)
+//                        print(assets)
                         completionHandler(.success(assets as! [T]))
                     } catch {
                         completionHandler(.failure(error))
