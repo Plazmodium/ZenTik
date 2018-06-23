@@ -13,10 +13,6 @@ final class GetCurrenciesConcrete : GetCurrencies{
     let makeAssetsNetworkCall = GetAssetsNetwork<CryptoParser>()
     var assetDataModel = [CryptoModel]()
     
-//    init(assetsNetworkCall: GetAssetsNetwork<CryptoModel>){
-//        self.makeAssetsNetworkCall = assetsNetworkCall
-//    }
-    
     func GetTheCryptoCurrencies(for apikey:String, completionHandler: @escaping ([CryptoModel]) -> Void) {
         
         self.makeAssetsNetworkCall.getAssets(for: apikey, completionHandler: { (results) in

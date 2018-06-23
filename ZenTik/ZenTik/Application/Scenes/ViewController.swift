@@ -16,11 +16,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //MARK: PROPERTIES
     var cryptoModel = [CryptoModelCryptoCompare]()
     var mainViewModel = MainViewModel()
+    var notificationCentre = NotificationCenter.default
     
     override func viewWillAppear(_ animated: Bool) {
         
-        //launchNetworkCall()
-        launchCoinIONetwork()
+        launchNetworkCall()
+//        launchCoinIONetwork()
     }
     
     override func viewDidLoad() {
@@ -29,6 +30,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //setup tableview delegates
         self.cryptoTableView.delegate = self
         self.cryptoTableView.dataSource = self
+        
+        //listen to incoming parsed data from API
+//        notificationCentre.addObserver(self, selector: #selector(self.listenToData(_:)), name: NSNotification.Name(rawValue: "CryptoData"), object: nil)
+        
+        notificationCentre.addObserver(self, selector: #selector(self.listenToCryptoCompareData(_:)), name: NSNotification.Name(rawValue: "CryptoCoins"), object: nil)
+    }
+    
+//    @objc func listenToData(_ notification: NSNotification) {
+//        if let dict = notification.userInfo as NSDictionary? {
+//            let id = dict["data"] as! [CryptoModel]
+//            id.forEach { (data) in
+//                print(data.asset_id)
+//            }
+//        }
+//    }
+    
+    @objc func listenToCryptoCompareData(_ notification: NSNotification) {
+        if let dict = notification.userInfo as NSDictionary? {
+            let cryptoData = dict["crypto"] as! [CryptoModelCryptoCompare]
+            self.cryptoModel = cryptoData
+            self.cryptoTableView.reloadData()
+        }
     }
     
    func launchCoinIONetwork(){
@@ -37,12 +60,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func launchNetworkCall() {
 
-        mainViewModel.getTheAssets() { (data) in
-            self.cryptoModel = data
-            self.cryptoTableView.reloadData()
-        }
+        mainViewModel.getAssetsFromCryptoCompare()
         
-//       let x = mainViewModel.getAssetsFromCoinIOAPI()
+//        mainViewModel.getTheAssets() { (data) in
+//            self.cryptoModel = data
+//            self.cryptoTableView.reloadData()
+//        }
     }
     
     //MARK: TABLEVIEW DELEGATES
@@ -101,5 +124,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
+        notificationCentre.removeObserver(self)
     }
 }

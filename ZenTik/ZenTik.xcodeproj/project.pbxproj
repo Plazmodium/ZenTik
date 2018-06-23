@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C80241820D2674C000AE7C8 /* AccessControlProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C80241720D2674C000AE7C8 /* AccessControlProvider.swift */; };
-		2C80241B20D267ED000AE7C8 /* AccessControlProviderConcrete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C80241A20D267ED000AE7C8 /* AccessControlProviderConcrete.swift */; };
+		2C699C6C20DE902800E9474F /* GetCryptoCurrenciesConcrete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C699C6B20DE902800E9474F /* GetCryptoCurrenciesConcrete.swift */; };
 		2CB9CF2620D7B95400E28AAE /* MainViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9CF2520D7B95400E28AAE /* MainViewTableViewCell.swift */; };
 		2CB9CF2820D8F3A500E28AAE /* CryptoParserCryptoCompare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9CF2720D8F3A500E28AAE /* CryptoParserCryptoCompare.swift */; };
 		2CB9CF2A20D900E800E28AAE /* GetAssetsCryptoCompare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9CF2920D900E800E28AAE /* GetAssetsCryptoCompare.swift */; };
@@ -50,8 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2C80241720D2674C000AE7C8 /* AccessControlProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessControlProvider.swift; sourceTree = "<group>"; };
-		2C80241A20D267ED000AE7C8 /* AccessControlProviderConcrete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessControlProviderConcrete.swift; sourceTree = "<group>"; };
+		2C699C6B20DE902800E9474F /* GetCryptoCurrenciesConcrete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCryptoCurrenciesConcrete.swift; sourceTree = "<group>"; };
 		2CB9CF2520D7B95400E28AAE /* MainViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewTableViewCell.swift; sourceTree = "<group>"; };
 		2CB9CF2720D8F3A500E28AAE /* CryptoParserCryptoCompare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoParserCryptoCompare.swift; sourceTree = "<group>"; };
 		2CB9CF2920D900E800E28AAE /* GetAssetsCryptoCompare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAssetsCryptoCompare.swift; sourceTree = "<group>"; };
@@ -106,22 +104,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2C80241620D2671A000AE7C8 /* AccessControl */ = {
-			isa = PBXGroup;
-			children = (
-				2C80241720D2674C000AE7C8 /* AccessControlProvider.swift */,
-			);
-			path = AccessControl;
-			sourceTree = "<group>";
-		};
-		2C80241920D267D1000AE7C8 /* AccessControlProviderConcrete */ = {
-			isa = PBXGroup;
-			children = (
-				2C80241A20D267ED000AE7C8 /* AccessControlProviderConcrete.swift */,
-			);
-			path = AccessControlProviderConcrete;
-			sourceTree = "<group>";
-		};
 		2CB9CF2B20D941D700E28AAE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,7 +169,6 @@
 		2CCF389020C81A840094C06A /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				2C80241620D2671A000AE7C8 /* AccessControl */,
 				2CD9CA7F20CA7954001F43E4 /* UseCases */,
 				2CCF389820C831B80094C06A /* Models */,
 			);
@@ -197,7 +178,6 @@
 		2CCF389120C81A920094C06A /* Platform */ = {
 			isa = PBXGroup;
 			children = (
-				2C80241920D267D1000AE7C8 /* AccessControlProviderConcrete */,
 				2CD9CA8820CAAAD6001F43E4 /* UseCasesConcrete */,
 				2CD9CA8320CA86D8001F43E4 /* NetworkCalls */,
 				2CD9CA8020CA7D13001F43E4 /* JSONParsers */,
@@ -265,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				2CD9CA8B20CAAF31001F43E4 /* GetCurrenciesConcrete.swift */,
+				2C699C6B20DE902800E9474F /* GetCryptoCurrenciesConcrete.swift */,
 			);
 			path = UseCasesConcrete;
 			sourceTree = "<group>";
@@ -405,13 +386,12 @@
 				2CB9CF2A20D900E800E28AAE /* GetAssetsCryptoCompare.swift in Sources */,
 				2CCF389720C8235C0094C06A /* GetCurrencies.swift in Sources */,
 				2CD9CA8720CA87A6001F43E4 /* ExchangeParser.swift in Sources */,
-				2C80241820D2674C000AE7C8 /* AccessControlProvider.swift in Sources */,
 				2CCF389A20C831ED0094C06A /* CryptoModel.swift in Sources */,
 				2CD9CA8520CA873E001F43E4 /* GetExchanges.swift in Sources */,
 				2CD9CA8C20CAAF31001F43E4 /* GetCurrenciesConcrete.swift in Sources */,
 				2CCF386320C817A70094C06A /* AppDelegate.swift in Sources */,
+				2C699C6C20DE902800E9474F /* GetCryptoCurrenciesConcrete.swift in Sources */,
 				2CCF389C20C835010094C06A /* ExchangeModel.swift in Sources */,
-				2C80241B20D267ED000AE7C8 /* AccessControlProviderConcrete.swift in Sources */,
 				2CB9CF2820D8F3A500E28AAE /* CryptoParserCryptoCompare.swift in Sources */,
 				2CB9CF2620D7B95400E28AAE /* MainViewTableViewCell.swift in Sources */,
 				2CB9CF2D20D941EE00E28AAE /* Extensions.swift in Sources */,

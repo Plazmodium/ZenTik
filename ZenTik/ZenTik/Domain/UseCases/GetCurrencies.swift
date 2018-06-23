@@ -11,3 +11,7 @@ import Foundation
 protocol GetCurrencies {
     func GetTheCryptoCurrencies(for apikey:String, completionHandler: @escaping ([CryptoModel]) -> Void)
 }
+
+protocol GetCryptoCurrencies {
+    func GetCryptoCurrencies(completionHandler: @escaping ([CryptoModelCryptoCompare])->Void)
+}

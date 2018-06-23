@@ -27,7 +27,7 @@ public class CryptoModel:NSObject{
     }
 }
 
-public class CryptoModelCryptoCompare{
+public class CryptoModelCryptoCompare:NSObject{
     
     let id : String
     let url: String
