@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C0FC3C520E57299007DCFA3 /* TextFieldBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0FC3C420E57299007DCFA3 /* TextFieldBinding.swift */; };
 		2C699C6C20DE902800E9474F /* GetCryptoCurrenciesConcrete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C699C6B20DE902800E9474F /* GetCryptoCurrenciesConcrete.swift */; };
 		2CB9CF2620D7B95400E28AAE /* MainViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9CF2520D7B95400E28AAE /* MainViewTableViewCell.swift */; };
 		2CB9CF2820D8F3A500E28AAE /* CryptoParserCryptoCompare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9CF2720D8F3A500E28AAE /* CryptoParserCryptoCompare.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C0FC3C420E57299007DCFA3 /* TextFieldBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldBinding.swift; sourceTree = "<group>"; };
 		2C699C6B20DE902800E9474F /* GetCryptoCurrenciesConcrete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCryptoCurrenciesConcrete.swift; sourceTree = "<group>"; };
 		2CB9CF2520D7B95400E28AAE /* MainViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewTableViewCell.swift; sourceTree = "<group>"; };
 		2CB9CF2720D8F3A500E28AAE /* CryptoParserCryptoCompare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoParserCryptoCompare.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				2CB9CF2C20D941EE00E28AAE /* Extensions.swift */,
+				2C0FC3C420E57299007DCFA3 /* TextFieldBinding.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				2CB9CF2620D7B95400E28AAE /* MainViewTableViewCell.swift in Sources */,
 				2CB9CF2D20D941EE00E28AAE /* Extensions.swift in Sources */,
 				2CD9CA8220CA7D25001F43E4 /* CryptoParser.swift in Sources */,
+				2C0FC3C520E57299007DCFA3 /* TextFieldBinding.swift in Sources */,
 				2CCF389520C8216A0094C06A /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,15 +8,26 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     //MARK: IBOUTLETS
     @IBOutlet weak var cryptoTableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!{
+        didSet{
+            searchBar.placeholder = "SEARCH COINS"
+            searchBar.delegate = self
+        }
+    }
     
     //MARK: PROPERTIES
     var cryptoModel = [CryptoModelCryptoCompare]()
     var mainViewModel = MainViewModel()
     var notificationCentre = NotificationCenter.default
+    
+    deinit {
+        notificationCentre.removeObserver(self, name: NSNotification.Name(rawValue: "CryptoData"), object: nil)
+        notificationCentre.removeObserver(self, name: NSNotification.Name(rawValue: "CryptoCoins"), object: nil)
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -30,6 +41,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //setup tableview delegates
         self.cryptoTableView.delegate = self
         self.cryptoTableView.dataSource = self
+        
         
         //listen to incoming parsed data from API
 //        notificationCentre.addObserver(self, selector: #selector(self.listenToData(_:)), name: NSNotification.Name(rawValue: "CryptoData"), object: nil)
@@ -66,6 +78,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //            self.cryptoModel = data
 //            self.cryptoTableView.reloadData()
 //        }
+    }
+    
+    //MARK: SEARCHBAR DELEGATES
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        let searchedData = self.cryptoModel.filter { (data) -> Bool in
+            data.coinName == searchBar.text!
+        }
+        self.cryptoModel = searchedData
+        cryptoTableView.reloadData()
     }
     
     //MARK: TABLEVIEW DELEGATES
@@ -124,7 +146,5 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
-        notificationCentre.removeObserver(self)
     }
 }

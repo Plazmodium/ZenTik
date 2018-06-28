@@ -10,12 +10,7 @@ import Foundation
 
 final public class MainViewModel{
     
-    var cryptoName:String? = nil
-    
-    convenience init(cryptoName:String){
-        self.init()
-        self.cryptoName = cryptoName
-    }
+    var searchText :String!
     
     let getAssets = GetAssetsCryptoCompare<Any>()
     var cryptoModel = [CryptoModelCryptoCompare]()
@@ -46,7 +41,6 @@ final public class MainViewModel{
             let cryptoCoins = ["crypto":self.cryptoModelCryptoCompare]
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "CryptoCoins"), object: nil, userInfo: cryptoCoins)
         }
-        
     }
 
 //    func getTheAssets(completionHandler:@escaping([CryptoModelCryptoCompare]) -> Void) {
