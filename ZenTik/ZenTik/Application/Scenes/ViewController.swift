@@ -61,6 +61,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @objc func listenToCryptoCompareData(_ notification: NSNotification) {
         if let dict = notification.userInfo as NSDictionary? {
             let cryptoData = dict["crypto"] as! [CryptoModelCryptoCompare]
+            self.cryptoModel.removeAll()
             self.cryptoModel = cryptoData
             self.cryptoTableView.reloadData()
         }
@@ -81,13 +82,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     //MARK: SEARCHBAR DELEGATES
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        let searchedData = self.cryptoModel.filter { (data) -> Bool in
-            data.coinName == searchBar.text!
+        if(searchText.isEmpty){
+            launchNetworkCall()
+        }else{
+            let searchedData = self.cryptoModel.filter { (data) -> Bool in
+                data.coinName.lowercased().contains(searchText.lowercased())
+            }
+            
+            self.cryptoModel = searchedData
+            cryptoTableView.reloadData()
         }
-        self.cryptoModel = searchedData
-        cryptoTableView.reloadData()
     }
     
     //MARK: TABLEVIEW DELEGATES
