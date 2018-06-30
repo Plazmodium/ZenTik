@@ -36,9 +36,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //setup tableview delegates
         self.cryptoTableView.delegate = self
         self.cryptoTableView.dataSource = self
-        
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboards))
-        view.addGestureRecognizer(tap)
     }
     
     func launchNetworkCall() {
@@ -53,6 +50,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         if(searchText.isEmpty){
+            loadingIndicator()
             launchNetworkCall()
         }else{
             let searchedData = self.mainViewModel.cryptoModelCryptoCompare.filter { (data) -> Bool in
@@ -64,6 +62,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+    }
+    
     //MARK: NAVIGATION CONTROL TO COIN'S DETAIL
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -73,6 +75,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             if let indexPath = self.cryptoTableView.indexPathForSelectedRow?.row{
                 
                 cryptoDetailController.cryptoName = self.mainViewModel.cryptoModelCryptoCompare[indexPath].coinName
+                cryptoDetailController.coinImageUrl = self.mainViewModel.cryptoModelCryptoCompare[indexPath].imageURL
             }
         }
     }
@@ -83,13 +86,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mainViewModel.cryptoModelCryptoCompare.count //self.cryptoModel.count
+        return mainViewModel.cryptoModelCryptoCompare.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cryptoCell = tableView.dequeueReusableCell(withIdentifier: "MainViewCell") as! MainViewTableViewCell
-        
+
         let theData = mainViewModel.cryptoModelCryptoCompare[indexPath.row]
         
         let urls = "https://www.cryptocompare.com\(theData.imageURL ?? "" )"
@@ -121,8 +124,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cryptoCell.cryptoTrading.text = "NO"
             cryptoCell.cryptoTrading.textColor = UIColor.red
         }
-        
-        //dismiss(animated: true, completion: nil)
         
         return cryptoCell
     }

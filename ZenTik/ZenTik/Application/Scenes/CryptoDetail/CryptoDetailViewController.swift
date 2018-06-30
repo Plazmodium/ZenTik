@@ -12,18 +12,23 @@ class CryptoDetailViewController: UIViewController {
 
     //MARK: IBOUTLETS & PROPERTIES
     @IBOutlet weak var coinNameLBL: UILabel!
+    @IBOutlet weak var coinUIImage: UIImageView!
     
     var cryptoName :String!
+    var coinImage : UIImage!
+    var coinImageUrl :String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         coinNameLBL.text = cryptoName
+        let imageUrl =  "https://www.cryptocompare.com\(coinImageUrl ?? "" )"
+        coinUIImage.downloadedFrom(link: imageUrl)
     }
     
     @IBAction func CloseBtn(_ sender: UIButton) {
         
-        dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {

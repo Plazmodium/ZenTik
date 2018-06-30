@@ -50,6 +50,9 @@ extension UIViewController{
         present(alert, animated: true, completion: nil)
     }
     
+    //usage:
+    //        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboards))
+    //        view.addGestureRecognizer(tap)
     @objc func dismissKeyboards() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
