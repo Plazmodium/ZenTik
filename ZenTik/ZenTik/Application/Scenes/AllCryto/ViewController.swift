@@ -44,8 +44,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func launchNetworkCall() {
         
         self.mainViewModel = MainViewModel(getCrypoCoins: self.getCryptoCurrenciesUseCase, completionHandler: {
-            self.dismiss(animated: true, completion: nil)
             self.cryptoTableView.reloadData()
+            self.dismiss(animated: true, completion: nil)
         })
     }
     

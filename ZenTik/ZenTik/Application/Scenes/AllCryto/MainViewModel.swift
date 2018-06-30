@@ -13,6 +13,7 @@ final public class MainViewModel{
     var cryptoModelCryptoCompare = [CryptoModelCryptoCompare]()
     
     init(getCrypoCoins:GetCryptoCurrenciesConcrete, completionHandler: @escaping () -> ()){
+        
         getCrypoCoins.GetCryptoCurrencies { (modelData) in
             
             self.cryptoModelCryptoCompare = modelData
