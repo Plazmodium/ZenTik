@@ -49,7 +49,9 @@ final class GetCryptoCurrenciesConcrete:GetCryptoCurrencies{
                     self.cryptoCurrenciesModel.append(model)
                 }
                 
+                
                 completionHandler(self.cryptoCurrenciesModel)
+                
                 
             case .failure(let error):
                 print("Error in getting crypto currencies: \(error.localizedDescription)")

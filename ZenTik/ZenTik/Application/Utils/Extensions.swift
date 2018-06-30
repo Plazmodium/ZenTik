@@ -31,3 +31,27 @@ extension UIImageView {
         downloadedFrom(url: url, contentMode: mode)
     }
 }
+
+//source https://stackoverflow.com/questions/27960556/loading-an-overlay-when-running-long-tasks-in-ios
+
+extension UIViewController{
+    
+    func loadingIndicator(){
+        
+        let alert = UIAlertController(title: nil, message: "Loading...", preferredStyle: .alert)
+        alert.view.tintColor = UIColor.black
+        
+        let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50)) as UIActivityIndicatorView
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        loadingIndicator.startAnimating();
+        
+        alert.view.addSubview(loadingIndicator)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    @objc func dismissKeyboards() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+}
