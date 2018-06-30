@@ -76,6 +76,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 
                 cryptoDetailController.cryptoName = self.mainViewModel.cryptoModelCryptoCompare[indexPath].coinName
                 cryptoDetailController.coinImageUrl = self.mainViewModel.cryptoModelCryptoCompare[indexPath].imageURL
+                cryptoDetailController.cryptoSymbol = self.mainViewModel.cryptoModelCryptoCompare[indexPath].symbol
+                cryptoDetailController.cryptoPoT = self.mainViewModel.cryptoModelCryptoCompare[indexPath].proofType
+                cryptoDetailController.cryptoAlgo = self.mainViewModel.cryptoModelCryptoCompare[indexPath].algorithm
             }
         }
     }
