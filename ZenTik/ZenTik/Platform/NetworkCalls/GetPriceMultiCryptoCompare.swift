@@ -1,30 +1,31 @@
 //
-//  GetAssetsNetwork.swift
+//  GetPriceMultiCryptoCompare.swift
 //  ZenTik
 //
-//  Created by Gabor Racz on 2018/06/08.
+//  Created by Gabor Racz on 2018/07/01.
 //  Copyright © 2018 Wodwo. All rights reserved.
 //
 
 import Foundation
 
-enum Results<Value> {
-    case success(Value)
+enum MultiPriceResults<T>{
+    case success(T)
     case failure(Error)
 }
 
-
-public class GetAssetsCryptoCompare<T>{
+public class GetPriceMultiCryptoCompare<T>{
     
-    func getAssets(completionHandler: @escaping (Results<(T)>) -> Void) {
+    func GetMultiPrice(for exchange:String, completionHandler: @escaping (MultiPriceResults<(T)>)->Void){
         
-        let url = URL(string:"https://min-api.cryptocompare.com/data/all/coinlist")!
+        let url = URL(string:"https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC&tsyms=USD,EUR,GBP&e=\(exchange)&extraParams=ZenTik")!
+        print(url)
         
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
+        
         let task = session.dataTask(with: request) { (responseData, response, responseError) in
             DispatchQueue.main.async {
                 if let error = responseError {
@@ -42,7 +43,7 @@ public class GetAssetsCryptoCompare<T>{
                         // We would use Post.self for JSON representing a single Post
                         // object, and [Post].self for JSON representing an array of
                         // Post objects
-                        let assets = try decoder.decode(CryptoParserCryptoCompare.self, from: jsonData)
+                        let assets = try decoder.decode(PriceMultiParser.self, from: jsonData)
                         
                         completionHandler(.success(assets as! T))
                     } catch {
@@ -58,3 +59,4 @@ public class GetAssetsCryptoCompare<T>{
         task.resume()
     }
 }
+

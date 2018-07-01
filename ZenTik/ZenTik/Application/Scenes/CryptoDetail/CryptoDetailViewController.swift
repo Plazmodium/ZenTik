@@ -12,6 +12,32 @@ class CryptoDetailViewController: UIViewController {
 
     //MARK: IBOUTLETS & PROPERTIES
     
+    @IBOutlet weak var contentUIView: UIView!{
+        didSet{
+            contentUIView.layer.shadowColor = UIColor.white.cgColor
+            contentUIView.layer.shadowOffset = CGSize(width: 0, height: 1)
+            contentUIView.layer.shadowOpacity = 1
+            contentUIView.layer.shadowRadius = 1.0
+            contentUIView.layer.cornerRadius = 10.0
+        }
+    }
+        
+    @IBOutlet weak var newsBtnUIView1: UIView!{
+        didSet{
+            newsBtnUIView1.addInnerShadow(topColor: UIColor.lightGray)
+//            newsBtnUIView1.layer.shadowRadius = 10.0
+//            newsBtnUIView1.layer.cornerRadius = 5.0
+        }
+    }
+    
+    @IBOutlet weak var newsBTN1: UIButton!{
+        didSet{
+//            newsBTN1.layer.borderColor = UIColor.black.cgColor
+//            newsBTN1.layer.borderWidth = 0.01
+        }
+    }
+    
+    
     @IBOutlet weak var basicContentUIViw: UIView!{
         didSet{
             basicContentUIViw.layer.shadowColor = UIColor.white.cgColor
@@ -50,6 +76,9 @@ class CryptoDetailViewController: UIViewController {
     var cryptoPoT :String!
     var coinImageUrl :String!
     
+    var viewModel:CryptoDetailViewModel!
+    let getPriceMultiUseCase = GetPriceMultiConcrete()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -59,6 +88,11 @@ class CryptoDetailViewController: UIViewController {
         coinPoT.text = cryptoPoT
         let imageUrl =  "https://www.cryptocompare.com\(coinImageUrl ?? "" )"
         coinUIImage.downloadedFrom(link: imageUrl)
+        
+        self.viewModel = CryptoDetailViewModel(getPriceMultiUseCase: self.getPriceMultiUseCase, chosenExchange: "Coinbase", chosenCurrency: "USD", completionHandler: {
+            
+            print(self.viewModel.priceMultiModel.change24Hour)
+        })
     }
     
     @IBAction func CloseBtn(_ sender: UIButton) {

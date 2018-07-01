@@ -58,3 +58,31 @@ extension UIViewController{
         view.endEditing(true)
     }
 }
+
+//source: https://gist.github.com/r-plus/31f109e44fc81a572192
+extension UIView{
+    
+    public func addInnerShadow(topColor: UIColor = UIColor.black.withAlphaComponent(0.3)) {
+        let shadowLayer = CAGradientLayer()
+        shadowLayer.cornerRadius = layer.cornerRadius
+        shadowLayer.frame = bounds
+        shadowLayer.frame.size.height = 3.0
+        shadowLayer.colors = [
+            topColor.cgColor,
+            UIColor.white.withAlphaComponent(0).cgColor
+        ]
+        layer.addSublayer(shadowLayer)
+    }
+    
+    public func addInnerShadowLeft(leftColor: UIColor = UIColor.black.withAlphaComponent(1.0)) {
+        let shadowLayer = CAGradientLayer()
+        shadowLayer.cornerRadius = layer.cornerRadius
+        shadowLayer.frame = bounds
+        shadowLayer.frame.size.width = 3.0
+        shadowLayer.colors = [
+            leftColor.cgColor,
+            UIColor.white.withAlphaComponent(0).cgColor
+        ]
+        layer.addSublayer(shadowLayer)
+    }
+}
