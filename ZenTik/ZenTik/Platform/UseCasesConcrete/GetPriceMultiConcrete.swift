@@ -8,13 +8,13 @@
 
 import Foundation
 
-final class GetPriceMultiConcrete: GetTheMultiPrice {
+final class GetPriceMultiConcrete<T>: GetTheMultiPrice {
 
     private var networkCall = GetPriceMultiCryptoCompare<PriceMultiParser>()
     
-    func GetTheMultiplePrices(exchange: String, currency:String, completionHandler: @escaping (PriceMultiModel) -> Void) {
+    func GetTheMultiplePrices(exchange: String, currency:String, cryptoCoin:String, completionHandler: @escaping (T) -> Void) {
         
-        self.networkCall.GetMultiPrice(for: exchange) { (results) in
+        self.networkCall.GetMultiPrice(for: exchange, for: cryptoCoin) { (results) in
             
             switch results{
                 
@@ -49,7 +49,7 @@ final class GetPriceMultiConcrete: GetTheMultiPrice {
                                                           totalvolume24H: parsedData.raw.btc.usd.totalvolume24H,
                                                           totalvolume24Hto: parsedData.raw.btc.usd.totalvolume24Hto)
                     
-                    completionHandler(multiPriceModelUSD)
+                    completionHandler(multiPriceModelUSD as! T)
                     
                 case "EUR":
                     
@@ -77,7 +77,7 @@ final class GetPriceMultiConcrete: GetTheMultiPrice {
                                                           totalvolume24H: parsedData.raw.btc.eur.totalvolume24H,
                                                           totalvolume24Hto: parsedData.raw.btc.eur.totalvolume24Hto)
                     
-                    completionHandler(multiPriceModelEUR)
+                    completionHandler(multiPriceModelEUR as! T)
                     
                 case "GBP":
                     
@@ -105,14 +105,16 @@ final class GetPriceMultiConcrete: GetTheMultiPrice {
                                                              totalvolume24H: parsedData.raw.btc.gbp.totalvolume24H,
                                                              totalvolume24Hto: parsedData.raw.btc.gbp.totalvolume24Hto)
                     
-                    completionHandler(multiPriceModelGBP)
+                    completionHandler(multiPriceModelGBP as! T)
                     
                 default:
                     break
                 }
 
             case .failure(let error):
-                 print("Error in getting multi prices: \(error.localizedDescription)")
+                 //print("Error in getting multi prices: \(error)")
+                
+                completionHandler(error as! T)
             }
             
             

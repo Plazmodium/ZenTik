@@ -9,5 +9,6 @@
 import Foundation
 
 protocol GetTheMultiPrice{
-    func GetTheMultiplePrices(exchange:String, currency:String, completionHandler: @escaping (PriceMultiModel) -> Void)
+    associatedtype T
+    func GetTheMultiplePrices(exchange:String, currency:String, cryptoCoin:String, completionHandler: @escaping (T) -> Void)
 }

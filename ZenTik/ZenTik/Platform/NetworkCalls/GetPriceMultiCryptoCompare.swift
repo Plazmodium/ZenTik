@@ -10,14 +10,14 @@ import Foundation
 
 enum MultiPriceResults<T>{
     case success(T)
-    case failure(Error)
+    case failure(String)
 }
 
 public class GetPriceMultiCryptoCompare<T>{
     
-    func GetMultiPrice(for exchange:String, completionHandler: @escaping (MultiPriceResults<(T)>)->Void){
+    func GetMultiPrice(for exchange:String, for cryptoCoin:String, completionHandler: @escaping (MultiPriceResults<(T)>)->Void){
         
-        let url = URL(string:"https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC&tsyms=USD,EUR,GBP&e=\(exchange)&extraParams=ZenTik")!
+        let url = URL(string:"https://min-api.cryptocompare.com/data/pricemultifull?fsyms=\(cryptoCoin)&tsyms=USD,EUR,GBP&e=\(exchange)&extraParams=ZenTik")!
         print(url)
         
         var request = URLRequest(url: url)
@@ -30,7 +30,7 @@ public class GetPriceMultiCryptoCompare<T>{
             DispatchQueue.main.async {
                 if let error = responseError {
                     //                    completionHandler(error as! T)
-                    completionHandler(.failure(error))
+                    completionHandler(.failure(error.localizedDescription))
                 } else if let jsonData = responseData {
                     // Now we have jsonData, Data representation of the JSON returned to us
                     // from our URLRequest...
@@ -47,11 +47,11 @@ public class GetPriceMultiCryptoCompare<T>{
                         
                         completionHandler(.success(assets as! T))
                     } catch {
-                        completionHandler(.failure(error))
+                        completionHandler(.failure(error.localizedDescription))
                     }
                 } else {
                     let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : "Data was not retrieved from request"])
-                    completionHandler(.failure(error))
+                    completionHandler(.failure(error.localizedDescription))
                 }
             }
         }

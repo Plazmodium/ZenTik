@@ -77,7 +77,7 @@ class CryptoDetailViewController: UIViewController {
     var coinImageUrl :String!
     
     var viewModel:CryptoDetailViewModel!
-    let getPriceMultiUseCase = GetPriceMultiConcrete()
+    let getPriceMultiUseCase = GetPriceMultiConcrete<Any>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,11 +89,15 @@ class CryptoDetailViewController: UIViewController {
         let imageUrl =  "https://www.cryptocompare.com\(coinImageUrl ?? "" )"
         coinUIImage.downloadedFrom(link: imageUrl)
         
-        self.viewModel = CryptoDetailViewModel(getPriceMultiUseCase: self.getPriceMultiUseCase, chosenExchange: "Coinbase", chosenCurrency: "USD", completionHandler: {
+        self.viewModel = CryptoDetailViewModel(getPriceMultiUseCase: self.getPriceMultiUseCase, chosenExchange: "Coinbase", chosenCurrency: "EUR", cryptoCoin: cryptoSymbol, completionHandler: {
             
-            print(self.viewModel.priceMultiModel.change24Hour)
+            if(self.viewModel.priceMultiModel.type.isEmpty){
+                self.alertDialogNoDataReturned()
+            }
         })
     }
+    
+    
     
     @IBAction func CloseBtn(_ sender: UIButton) {
         
@@ -103,6 +107,14 @@ class CryptoDetailViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func alertDialogNoDataReturned(){
+        let alert = UIAlertController(title: "Heads Up!", message: "It seems this coin/token is not listed on the selected exchange.", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { handle in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 
     /*
