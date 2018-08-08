@@ -25,18 +25,21 @@ class CryptoDetailViewController: UIViewController {
     @IBOutlet weak var newsBtnUIView1: UIView!{
         didSet{
             newsBtnUIView1.addInnerShadow(topColor: UIColor.lightGray)
-//            newsBtnUIView1.layer.shadowRadius = 10.0
-//            newsBtnUIView1.layer.cornerRadius = 5.0
         }
     }
-    
-    @IBOutlet weak var newsBTN1: UIButton!{
+    @IBOutlet weak var newsBTN1: UIButton!
+
+    @IBOutlet weak var NewsBtnUIView2: UIView!{
         didSet{
-//            newsBTN1.layer.borderColor = UIColor.black.cgColor
-//            newsBTN1.layer.borderWidth = 0.01
+            NewsBtnUIView2.addInnerShadow(topColor: UIColor.lightGray)
         }
     }
     
+    @IBOutlet weak var newsBtnUIView3: UIView!{
+        didSet{
+            newsBtnUIView3.addInnerShadow(topColor: UIColor.lightGray)
+        }
+    }
     
     @IBOutlet weak var basicContentUIViw: UIView!{
         didSet{

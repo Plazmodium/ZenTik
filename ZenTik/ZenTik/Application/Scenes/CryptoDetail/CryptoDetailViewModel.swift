@@ -29,6 +29,7 @@ final public class CryptoDetailViewModel{
                 let model = model as! PriceMultiModel
                 
                 self.priceMultiModel = PriceMultiModel(type: model.type, market: model.market, fromsymbol: model.fromsymbol, tosymbol: model.tosymbol, flags: model.flags, price: model.price, lastupdate: model.lastupdate, lastvolume: model.lastvolume, lastvolumeto: model.lastvolumeto, lasttradeid: model.lasttradeid, volume24Hour: model.volume24Hour, volume24Hourto: model.volume24Hourto, open24Hour: model.open24Hour, high24Hour: model.high24Hour, low24Hour: model.low24Hour, change24Hour: model.change24Hour, changepct24Hour: model.changepct24Hour, changeday: model.changeday, changepctday: model.changepctday, supply: model.supply, mktcap: model.mktcap, totalvolume24H: model.totalvolume24H, totalvolume24Hto: model.totalvolume24Hto)
+                
                 completionHandler()
             }
         }

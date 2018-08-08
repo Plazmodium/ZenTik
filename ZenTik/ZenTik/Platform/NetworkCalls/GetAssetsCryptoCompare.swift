@@ -42,6 +42,7 @@ public class GetAssetsCryptoCompare<T>{
                         // We would use Post.self for JSON representing a single Post
                         // object, and [Post].self for JSON representing an array of
                         // Post objects
+                        print(jsonData)
                         let assets = try decoder.decode(CryptoParserCryptoCompare.self, from: jsonData)
                         
                         completionHandler(.success(assets as! T))
