@@ -92,10 +92,14 @@ class CryptoDetailViewController: UIViewController {
         let imageUrl =  "https://www.cryptocompare.com\(coinImageUrl ?? "" )"
         coinUIImage.downloadedFrom(link: imageUrl)
         
-        self.viewModel = CryptoDetailViewModel(getPriceMultiUseCase: self.getPriceMultiUseCase, chosenExchange: "Coinbase", chosenCurrency: "EUR", cryptoCoin: cryptoSymbol, completionHandler: {
+        self.viewModel = CryptoDetailViewModel(getPriceMultiUseCase: self.getPriceMultiUseCase, chosenExchange: "Coinbase", chosenCurrency: "USD", cryptoCoin: cryptoSymbol, completionHandler: {
             
             if(self.viewModel.priceMultiModel.type.isEmpty){
                 self.alertDialogNoDataReturned()
+            }else{
+                
+                //TODO: Populate with details
+                
             }
         })
     }

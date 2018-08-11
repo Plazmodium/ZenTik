@@ -26,6 +26,7 @@ public class GetAssetsCryptoCompare<T>{
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
         let task = session.dataTask(with: request) { (responseData, response, responseError) in
+            
             DispatchQueue.main.async {
                 if let error = responseError {
                     //                    completionHandler(error as! T)

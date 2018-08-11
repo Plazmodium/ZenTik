@@ -25,6 +25,14 @@ public class CryptoModel:NSObject{
         self.isCrypto = isCrypto
         self.dateStarted = dateStarted
     }
+    
+    init(cryptoParser:CryptoParser){
+        
+        self.asset_id = cryptoParser.assetID
+        self.name = cryptoParser.name
+        self.isCrypto = cryptoParser.typeIsCrypto
+        self.dateStarted = cryptoParser.dataStart
+    }
 }
 
 public class CryptoModelCryptoCompare:NSObject{
@@ -79,6 +87,26 @@ public class CryptoModelCryptoCompare:NSObject{
         self.sortOrder = sortOrder
         self.sponsored = sponsored
         self.isTrading = isTrading
+    }
+    
+    init(datum:Datum){
+        
+        self.id = datum.id
+        self.url = datum.url
+        self.imageURL = datum.imageURL
+        self.name = datum.name
+        self.symbol = datum.symbol
+        self.coinName = datum.coinName
+        self.fullName = datum.fullName
+        self.algorithm = datum.algorithm
+        self.proofType = datum.proofType
+        self.fullyPremined = datum.fullyPremined
+        self.totalCoinSupply = datum.totalCoinSupply
+        self.preMinedValue = datum.preMinedValue.rawValue
+        self.totalCoinsFreeFloat = datum.totalCoinsFreeFloat.rawValue
+        self.sortOrder = datum.sortOrder
+        self.sponsored = datum.sponsored
+        self.isTrading = datum.isTrading
     }
 }
 

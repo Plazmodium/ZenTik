@@ -17,7 +17,7 @@ public class GetPriceMultiCryptoCompare<T>{
     
     func GetMultiPrice(for exchange:String, for cryptoCoin:String, completionHandler: @escaping (MultiPriceResults<(T)>)->Void){
         
-        let url = URL(string:"https://min-api.cryptocompare.com/data/pricemultifull?fsyms=\(cryptoCoin)&tsyms=USD,EUR,GBP&e=\(exchange)&extraParams=ZenTik")!
+        let url = URL(string:"https://min-api.cryptocompare.com/data/pricemultifull?fsyms=\(cryptoCoin)&tsyms=USD&e=\(exchange)&extraParams=ZenTik")!
         print(url)
         
         var request = URLRequest(url: url)

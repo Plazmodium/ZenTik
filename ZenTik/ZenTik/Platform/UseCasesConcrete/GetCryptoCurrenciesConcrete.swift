@@ -27,28 +27,29 @@ final class GetCryptoCurrenciesConcrete:GetCryptoCurrencies{
                     self.datum.append(value)
                 })
                 
-                for i in self.datum{
-                    
-                    let model = CryptoModelCryptoCompare(id: i.id,
-                                                         url: i.url,
-                                                         imageURL: i.imageURL,
-                                                         name: i.name,
-                                                         symbol: i.symbol,
-                                                         coinName: i.coinName,
-                                                         fullName: i.fullName,
-                                                         algorithm: i.algorithm,
-                                                         proofType: i.proofType,
-                                                         fullyPremined: i.fullyPremined,
-                                                         totalCoinSupply: i.totalCoinSupply,
-                                                         preMinedValue: i.preMinedValue.rawValue,
-                                                         totalCoinsFreeFloat: i.totalCoinsFreeFloat.rawValue,
-                                                         sortOrder: i.sortOrder,
-                                                         sponsored: i.sponsored,
-                                                         isTrading: i.isTrading)
-                    
-                    self.cryptoCurrenciesModel.append(model)
-                }
+                self.cryptoCurrenciesModel = self.datum.map(CryptoModelCryptoCompare.init)
                 
+//                for i in self.datum{
+//
+//                    let model = CryptoModelCryptoCompare(id: i.id,
+//                                                         url: i.url,
+//                                                         imageURL: i.imageURL,
+//                                                         name: i.name,
+//                                                         symbol: i.symbol,
+//                                                         coinName: i.coinName,
+//                                                         fullName: i.fullName,
+//                                                         algorithm: i.algorithm,
+//                                                         proofType: i.proofType,
+//                                                         fullyPremined: i.fullyPremined,
+//                                                         totalCoinSupply: i.totalCoinSupply,
+//                                                         preMinedValue: i.preMinedValue.rawValue,
+//                                                         totalCoinsFreeFloat: i.totalCoinsFreeFloat.rawValue,
+//                                                         sortOrder: i.sortOrder,
+//                                                         sponsored: i.sponsored,
+//                                                         isTrading: i.isTrading)
+//
+//                    self.cryptoCurrenciesModel.append(model)
+//                }
                 
                 completionHandler(self.cryptoCurrenciesModel)
                 

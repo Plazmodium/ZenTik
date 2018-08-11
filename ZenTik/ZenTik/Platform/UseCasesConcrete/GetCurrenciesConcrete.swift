@@ -21,15 +21,7 @@ final class GetCurrenciesConcrete : GetCurrencies{
                 
             case .success(let assets):
                
-                for i in assets{
-                    
-                    let model = CryptoModel(assest_id: i.assetID,
-                                                       name: i.name,
-                                                       isCrypto: i.typeIsCrypto,
-                                                       dateStarted: i.dataTradeStart ?? "No data")
-                    
-                    self.assetDataModel.append(model)
-                }
+                self.assetDataModel = assets.map(CryptoModel.init)
                 
                 completionHandler(self.assetDataModel)
                 
