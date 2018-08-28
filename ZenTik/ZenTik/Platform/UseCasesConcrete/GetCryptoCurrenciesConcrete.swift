@@ -10,7 +10,7 @@ import Foundation
 
 final class GetCryptoCurrenciesConcrete:GetCryptoCurrencies{
     
-    var networkCall = GetAssetsCryptoCompare<CryptoParserCryptoCompare>()
+//    var networkCall = GetAssetsCryptoCompare<CryptoParserCryptoCompare>()
     var cryptoCurrenciesModel = [CryptoModelCryptoCompare]()
     var datum = [Datum]()
     
@@ -34,9 +34,8 @@ final class GetCryptoCurrenciesConcrete:GetCryptoCurrencies{
                 completionHandler(self.cryptoCurrenciesModel)
                 
             case .failure(let error):
-                 print("Error in getting crypto currencies: \(error.localizedDescription)")
+                 print("Error in getting crypto currencies: \(error)")
             }
-            
         }
         
 
