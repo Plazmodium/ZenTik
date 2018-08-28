@@ -18,7 +18,7 @@ final public class CryptoDetailViewModel{
         
         getPriceMultiUseCase.GetTheMultiplePrices(exchange: chosenExchange, currency: chosenCurrency, cryptoCoin: cryptoCoin) { (model) in
             
-            if(model as? String == "The data couldn’t be read because it is missing."){
+            if((model as? String == "The data couldn’t be read because it is missing.") || (model as? String == "The data couldn’t be read because it is missing.")){
                 
                 self.priceMultiModel = PriceMultiModel(type: "", market: "", fromsymbol: "", tosymbol: "", flags: "", price: 0.00, lastupdate: 0, lastvolume: 0.00, lastvolumeto: 0.00, lasttradeid: "", volume24Hour: 0, volume24Hourto: 0.00, open24Hour: 0.00, high24Hour: 0.00, low24Hour: 0.00, change24Hour: 0.00, changepct24Hour: 0.00, changeday: 0, changepctday: 0, supply: 0, mktcap: 0.00, totalvolume24H: 0.00, totalvolume24Hto: 0.00)
             

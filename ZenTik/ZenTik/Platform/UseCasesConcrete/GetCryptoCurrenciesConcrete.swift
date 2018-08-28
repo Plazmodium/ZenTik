@@ -10,15 +10,18 @@ import Foundation
 
 final class GetCryptoCurrenciesConcrete:GetCryptoCurrencies{
     
-    var networkCall = GetAssetsCryptoCompare<CryptoParserCryptoCompare>()
+//    var networkCall = GetAssetsCryptoCompare<CryptoParserCryptoCompare>()
     var cryptoCurrenciesModel = [CryptoModelCryptoCompare]()
     var datum = [Datum]()
     
     func GetCryptoCurrencies(completionHandler: @escaping ([CryptoModelCryptoCompare]) -> Void) {
         
-        self.networkCall.getAssets { (results) in
+        let url = "https://min-api.cryptocompare.com/data/all/coinlist"
+        
+        HTTPHelperClass.networkCallGet(urlString: url, parserType: CryptoParserCryptoCompare.self) { (decodable) in
             
-            switch(results){
+            switch(decodable){
+                
             case .success(let assets):
                 
                 let parsedData = assets
@@ -28,35 +31,33 @@ final class GetCryptoCurrenciesConcrete:GetCryptoCurrencies{
                 })
                 
                 self.cryptoCurrenciesModel = self.datum.map(CryptoModelCryptoCompare.init)
-                
-//                for i in self.datum{
-//
-//                    let model = CryptoModelCryptoCompare(id: i.id,
-//                                                         url: i.url,
-//                                                         imageURL: i.imageURL,
-//                                                         name: i.name,
-//                                                         symbol: i.symbol,
-//                                                         coinName: i.coinName,
-//                                                         fullName: i.fullName,
-//                                                         algorithm: i.algorithm,
-//                                                         proofType: i.proofType,
-//                                                         fullyPremined: i.fullyPremined,
-//                                                         totalCoinSupply: i.totalCoinSupply,
-//                                                         preMinedValue: i.preMinedValue.rawValue,
-//                                                         totalCoinsFreeFloat: i.totalCoinsFreeFloat.rawValue,
-//                                                         sortOrder: i.sortOrder,
-//                                                         sponsored: i.sponsored,
-//                                                         isTrading: i.isTrading)
-//
-//                    self.cryptoCurrenciesModel.append(model)
-//                }
-                
                 completionHandler(self.cryptoCurrenciesModel)
                 
-                
             case .failure(let error):
-                print("Error in getting crypto currencies: \(error.localizedDescription)")
+                 print("Error in getting crypto currencies: \(error)")
             }
         }
+        
+
+//        self.networkCall.getAssets { (results) in
+//
+//            switch(results){
+//            case .success(let assets):
+//
+//                let parsedData = assets
+//                parsedData.data.forEach({ (key,value) in
+//
+//                    self.datum.append(value)
+//                })
+//
+//                self.cryptoCurrenciesModel = self.datum.map(CryptoModelCryptoCompare.init)
+//
+//                completionHandler(self.cryptoCurrenciesModel)
+//
+//
+//            case .failure(let error):
+//                print("Error in getting crypto currencies: \(error.localizedDescription)")
+//            }
+//        }
     }
 }
