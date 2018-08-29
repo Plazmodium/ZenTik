@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2C0FC3C520E57299007DCFA3 /* TextFieldBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0FC3C420E57299007DCFA3 /* TextFieldBinding.swift */; };
+		2C2041D421369F8E008E4CA8 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2041D321369F8E008E4CA8 /* CreateAccountViewController.swift */; };
+		2C2041D621369FDC008E4CA8 /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2041D521369FDC008E4CA8 /* CreateAccountViewModel.swift */; };
+		2C2041D821369FEE008E4CA8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2041D721369FEE008E4CA8 /* LoginViewController.swift */; };
+		2C2041DA2136A035008E4CA8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2041D92136A035008E4CA8 /* LoginViewModel.swift */; };
+		2C2041DC2136A17D008E4CA8 /* FirebaseHelperClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2041DB2136A17D008E4CA8 /* FirebaseHelperClass.swift */; };
 		2C34269C20E800C80020EA5A /* CryptoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C34269B20E800C80020EA5A /* CryptoDetailViewModel.swift */; };
 		2C34269E20E928F70020EA5A /* GetPriceMulti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C34269D20E928F70020EA5A /* GetPriceMulti.swift */; };
 		2C3426A020E929470020EA5A /* PriceMultiParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C34269F20E929470020EA5A /* PriceMultiParser.swift */; };
@@ -18,6 +23,7 @@
 		2C4A8D2920E93512001CA705 /* PriceMultiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4A8D2820E93512001CA705 /* PriceMultiModel.swift */; };
 		2C699C6C20DE902800E9474F /* GetCryptoCurrenciesConcrete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C699C6B20DE902800E9474F /* GetCryptoCurrenciesConcrete.swift */; };
 		2C7C5A8320E6276800B4C323 /* CryptoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7C5A8220E6276800B4C323 /* CryptoDetailViewController.swift */; };
+		2C9DDBD721369ACE002EB435 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C9DDBD621369ACD002EB435 /* GoogleService-Info.plist */; };
 		2CA453B4213539DC000862CA /* HTTPHelperClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA453B3213539DC000862CA /* HTTPHelperClass.swift */; };
 		2CB9CF2620D7B95400E28AAE /* MainViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9CF2520D7B95400E28AAE /* MainViewTableViewCell.swift */; };
 		2CB9CF2820D8F3A500E28AAE /* CryptoParserCryptoCompare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9CF2720D8F3A500E28AAE /* CryptoParserCryptoCompare.swift */; };
@@ -40,6 +46,9 @@
 		2CD9CA8A20CAACA0001F43E4 /* GetAssetsNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9CA8920CAACA0001F43E4 /* GetAssetsNetwork.swift */; };
 		2CD9CA8C20CAAF31001F43E4 /* GetCurrenciesConcrete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9CA8B20CAAF31001F43E4 /* GetCurrenciesConcrete.swift */; };
 		2CFEE1D920DA800D007512C0 /* GetAssetsCryptoCompareTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFEE1D820DA800D007512C0 /* GetAssetsCryptoCompareTest.swift */; };
+		558AE7A6C8636CCCDC4BFCA6 /* Pods_ZenTikUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34263E7E45AA0716A0FF6EB9 /* Pods_ZenTikUITests.framework */; };
+		69DDBC513DC29D8B60F49773 /* Pods_ZenTikTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15E2CD1E7A9D8C3123A25DA /* Pods_ZenTikTests.framework */; };
+		EE235F3B05324F587887AC3B /* Pods_ZenTik.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F6FB7EB4D994C050631C34 /* Pods_ZenTik.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +69,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14F6FB7EB4D994C050631C34 /* Pods_ZenTik.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZenTik.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B8F217CD9778C3332DAC4DB /* Pods-ZenTikUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZenTikUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZenTikUITests/Pods-ZenTikUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2C0FC3C420E57299007DCFA3 /* TextFieldBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldBinding.swift; sourceTree = "<group>"; };
+		2C2041D321369F8E008E4CA8 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		2C2041D521369FDC008E4CA8 /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
+		2C2041D721369FEE008E4CA8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2C2041D92136A035008E4CA8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		2C2041DB2136A17D008E4CA8 /* FirebaseHelperClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelperClass.swift; sourceTree = "<group>"; };
 		2C34269B20E800C80020EA5A /* CryptoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailViewModel.swift; sourceTree = "<group>"; };
 		2C34269D20E928F70020EA5A /* GetPriceMulti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPriceMulti.swift; sourceTree = "<group>"; };
 		2C34269F20E929470020EA5A /* PriceMultiParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceMultiParser.swift; sourceTree = "<group>"; };
@@ -69,6 +85,7 @@
 		2C4A8D2820E93512001CA705 /* PriceMultiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceMultiModel.swift; sourceTree = "<group>"; };
 		2C699C6B20DE902800E9474F /* GetCryptoCurrenciesConcrete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCryptoCurrenciesConcrete.swift; sourceTree = "<group>"; };
 		2C7C5A8220E6276800B4C323 /* CryptoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailViewController.swift; sourceTree = "<group>"; };
+		2C9DDBD621369ACD002EB435 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2CA453B3213539DC000862CA /* HTTPHelperClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHelperClass.swift; sourceTree = "<group>"; };
 		2CB9CF2520D7B95400E28AAE /* MainViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewTableViewCell.swift; sourceTree = "<group>"; };
 		2CB9CF2720D8F3A500E28AAE /* CryptoParserCryptoCompare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoParserCryptoCompare.swift; sourceTree = "<group>"; };
@@ -97,6 +114,13 @@
 		2CD9CA8920CAACA0001F43E4 /* GetAssetsNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAssetsNetwork.swift; sourceTree = "<group>"; };
 		2CD9CA8B20CAAF31001F43E4 /* GetCurrenciesConcrete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrenciesConcrete.swift; sourceTree = "<group>"; };
 		2CFEE1D820DA800D007512C0 /* GetAssetsCryptoCompareTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAssetsCryptoCompareTest.swift; sourceTree = "<group>"; };
+		34263E7E45AA0716A0FF6EB9 /* Pods_ZenTikUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZenTikUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C984097D48C0DBBF9D1BDA3 /* Pods-ZenTik.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZenTik.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZenTik/Pods-ZenTik.debug.xcconfig"; sourceTree = "<group>"; };
+		3D2D41DB4066A5D6DB39A936 /* Pods-ZenTikUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZenTikUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZenTikUITests/Pods-ZenTikUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B19E91FEAE8A07422F594A21 /* Pods-ZenTik.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZenTik.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZenTik/Pods-ZenTik.release.xcconfig"; sourceTree = "<group>"; };
+		DC92AEA8DC6292662BB79B16 /* Pods-ZenTikTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZenTikTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZenTikTests/Pods-ZenTikTests.release.xcconfig"; sourceTree = "<group>"; };
+		E15E2CD1E7A9D8C3123A25DA /* Pods_ZenTikTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZenTikTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEED5A516642D63250537FD6 /* Pods-ZenTikTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZenTikTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZenTikTests/Pods-ZenTikTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE235F3B05324F587887AC3B /* Pods_ZenTik.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69DDBC513DC29D8B60F49773 /* Pods_ZenTikTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,12 +144,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				558AE7A6C8636CCCDC4BFCA6 /* Pods_ZenTikUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C2041D121369F58008E4CA8 /* CreateAccount */ = {
+			isa = PBXGroup;
+			children = (
+				2C2041D321369F8E008E4CA8 /* CreateAccountViewController.swift */,
+				2C2041D521369FDC008E4CA8 /* CreateAccountViewModel.swift */,
+			);
+			path = CreateAccount;
+			sourceTree = "<group>";
+		};
+		2C2041D221369F6C008E4CA8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2C2041D721369FEE008E4CA8 /* LoginViewController.swift */,
+				2C2041D92136A035008E4CA8 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		2C7C5A8020E6270E00B4C323 /* AllCryto */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +194,7 @@
 				2CB9CF2C20D941EE00E28AAE /* Extensions.swift */,
 				2C0FC3C420E57299007DCFA3 /* TextFieldBinding.swift */,
 				2CA453B3213539DC000862CA /* HTTPHelperClass.swift */,
+				2C2041DB2136A17D008E4CA8 /* FirebaseHelperClass.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -160,6 +206,8 @@
 				2CCF387620C817A80094C06A /* ZenTikTests */,
 				2CCF388120C817A80094C06A /* ZenTikUITests */,
 				2CCF386020C817A70094C06A /* Products */,
+				DC993108723A679DD9AB005F /* Pods */,
+				F7AED4A262C280A2A9E8CF41 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,6 +232,7 @@
 				2CCF386920C817A80094C06A /* Assets.xcassets */,
 				2CCF386B20C817A80094C06A /* LaunchScreen.storyboard */,
 				2CCF386E20C817A80094C06A /* Info.plist */,
+				2C9DDBD621369ACD002EB435 /* GoogleService-Info.plist */,
 			);
 			path = ZenTik;
 			sourceTree = "<group>";
@@ -238,6 +287,8 @@
 		2CCF389320C81FED0094C06A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2C2041D121369F58008E4CA8 /* CreateAccount */,
+				2C2041D221369F6C008E4CA8 /* Login */,
 				2C7C5A8020E6270E00B4C323 /* AllCryto */,
 				2C7C5A8120E6273C00B4C323 /* CryptoDetail */,
 			);
@@ -295,6 +346,29 @@
 			path = UseCasesConcrete;
 			sourceTree = "<group>";
 		};
+		DC993108723A679DD9AB005F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C984097D48C0DBBF9D1BDA3 /* Pods-ZenTik.debug.xcconfig */,
+				B19E91FEAE8A07422F594A21 /* Pods-ZenTik.release.xcconfig */,
+				EEED5A516642D63250537FD6 /* Pods-ZenTikTests.debug.xcconfig */,
+				DC92AEA8DC6292662BB79B16 /* Pods-ZenTikTests.release.xcconfig */,
+				1B8F217CD9778C3332DAC4DB /* Pods-ZenTikUITests.debug.xcconfig */,
+				3D2D41DB4066A5D6DB39A936 /* Pods-ZenTikUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F7AED4A262C280A2A9E8CF41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14F6FB7EB4D994C050631C34 /* Pods_ZenTik.framework */,
+				E15E2CD1E7A9D8C3123A25DA /* Pods_ZenTikTests.framework */,
+				34263E7E45AA0716A0FF6EB9 /* Pods_ZenTikUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -302,9 +376,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CCF388720C817A80094C06A /* Build configuration list for PBXNativeTarget "ZenTik" */;
 			buildPhases = (
+				67CF1AC33BAA5C29AF058BB9 /* [CP] Check Pods Manifest.lock */,
 				2CCF385B20C817A70094C06A /* Sources */,
 				2CCF385C20C817A70094C06A /* Frameworks */,
 				2CCF385D20C817A70094C06A /* Resources */,
+				A14688BEDFC623555C20FE47 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -319,6 +395,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CCF388A20C817A80094C06A /* Build configuration list for PBXNativeTarget "ZenTikTests" */;
 			buildPhases = (
+				3F381B7AF34706DE90908954 /* [CP] Check Pods Manifest.lock */,
 				2CCF386F20C817A80094C06A /* Sources */,
 				2CCF387020C817A80094C06A /* Frameworks */,
 				2CCF387120C817A80094C06A /* Resources */,
@@ -337,6 +414,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CCF388D20C817A80094C06A /* Build configuration list for PBXNativeTarget "ZenTikUITests" */;
 			buildPhases = (
+				6C75BD0B3C53158C22E8300D /* [CP] Check Pods Manifest.lock */,
 				2CCF387A20C817A80094C06A /* Sources */,
 				2CCF387B20C817A80094C06A /* Frameworks */,
 				2CCF387C20C817A80094C06A /* Resources */,
@@ -400,6 +478,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CCF386D20C817A80094C06A /* LaunchScreen.storyboard in Resources */,
+				2C9DDBD721369ACE002EB435 /* GoogleService-Info.plist in Resources */,
 				2CCF386A20C817A80094C06A /* Assets.xcassets in Resources */,
 				2CCF386820C817A70094C06A /* Main.storyboard in Resources */,
 			);
@@ -421,11 +500,91 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3F381B7AF34706DE90908954 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZenTikTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		67CF1AC33BAA5C29AF058BB9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZenTik-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C75BD0B3C53158C22E8300D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZenTikUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A14688BEDFC623555C20FE47 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZenTik/Pods-ZenTik-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZenTik/Pods-ZenTik-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2CCF385B20C817A70094C06A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C2041D821369FEE008E4CA8 /* LoginViewController.swift in Sources */,
 				2C3426A220E92A920020EA5A /* GetPriceMultiCryptoCompare.swift in Sources */,
 				2C7C5A8320E6276800B4C323 /* CryptoDetailViewController.swift in Sources */,
 				2CD9CA8A20CAACA0001F43E4 /* GetAssetsNetwork.swift in Sources */,
@@ -433,6 +592,7 @@
 				2CCF386520C817A70094C06A /* ViewController.swift in Sources */,
 				2CB9CF2A20D900E800E28AAE /* GetAssetsCryptoCompare.swift in Sources */,
 				2CCF389720C8235C0094C06A /* GetCurrencies.swift in Sources */,
+				2C2041D621369FDC008E4CA8 /* CreateAccountViewModel.swift in Sources */,
 				2CD9CA8720CA87A6001F43E4 /* ExchangeParser.swift in Sources */,
 				2CCF389A20C831ED0094C06A /* CryptoModel.swift in Sources */,
 				2CD9CA8520CA873E001F43E4 /* GetExchanges.swift in Sources */,
@@ -444,6 +604,9 @@
 				2C34269E20E928F70020EA5A /* GetPriceMulti.swift in Sources */,
 				2C4A8D2920E93512001CA705 /* PriceMultiModel.swift in Sources */,
 				2CCF389C20C835010094C06A /* ExchangeModel.swift in Sources */,
+				2C2041D421369F8E008E4CA8 /* CreateAccountViewController.swift in Sources */,
+				2C2041DC2136A17D008E4CA8 /* FirebaseHelperClass.swift in Sources */,
+				2C2041DA2136A035008E4CA8 /* LoginViewModel.swift in Sources */,
 				2CB9CF2820D8F3A500E28AAE /* CryptoParserCryptoCompare.swift in Sources */,
 				2CB9CF2620D7B95400E28AAE /* MainViewTableViewCell.swift in Sources */,
 				2C3426A620E92D920020EA5A /* GetPriceMultiConcrete.swift in Sources */,
@@ -624,15 +787,13 @@
 		};
 		2CCF388820C817A80094C06A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C984097D48C0DBBF9D1BDA3 /* Pods-ZenTik.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JNHBJ3JE68;
 				INFOPLIST_FILE = ZenTik/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.za.wodwo.ZenTik;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -642,15 +803,13 @@
 		};
 		2CCF388920C817A80094C06A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B19E91FEAE8A07422F594A21 /* Pods-ZenTik.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JNHBJ3JE68;
 				INFOPLIST_FILE = ZenTik/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.za.wodwo.ZenTik;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -660,17 +819,14 @@
 		};
 		2CCF388B20C817A80094C06A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEED5A516642D63250537FD6 /* Pods-ZenTikTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JNHBJ3JE68;
 				INFOPLIST_FILE = ZenTikTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.za.wodwo.ZenTikTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -681,17 +837,14 @@
 		};
 		2CCF388C20C817A80094C06A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC92AEA8DC6292662BB79B16 /* Pods-ZenTikTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JNHBJ3JE68;
 				INFOPLIST_FILE = ZenTikTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.za.wodwo.ZenTikTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -702,16 +855,13 @@
 		};
 		2CCF388E20C817A80094C06A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B8F217CD9778C3332DAC4DB /* Pods-ZenTikUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JNHBJ3JE68;
 				INFOPLIST_FILE = ZenTikUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.za.wodwo.ZenTikUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -722,16 +872,13 @@
 		};
 		2CCF388F20C817A80094C06A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D2D41DB4066A5D6DB39A936 /* Pods-ZenTikUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JNHBJ3JE68;
 				INFOPLIST_FILE = ZenTikUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.za.wodwo.ZenTikUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
