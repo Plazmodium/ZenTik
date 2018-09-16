@@ -57,6 +57,15 @@ extension UIViewController{
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
+    
+    func alertController(message:String){
+        let alert = UIAlertController(title: "HEADS UP", message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { handle in
+            
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
 
 //source: https://gist.github.com/r-plus/31f109e44fc81a572192

@@ -26,6 +26,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewWillAppear(_ animated: Bool) {
         
+        self.navigationItem.setHidesBackButton(true, animated: true)
+        
         loadingIndicator()
         launchNetworkCall()
     }

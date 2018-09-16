@@ -22,6 +22,9 @@
 		2C3426A620E92D920020EA5A /* GetPriceMultiConcrete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3426A520E92D920020EA5A /* GetPriceMultiConcrete.swift */; };
 		2C4A8D2920E93512001CA705 /* PriceMultiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4A8D2820E93512001CA705 /* PriceMultiModel.swift */; };
 		2C699C6C20DE902800E9474F /* GetCryptoCurrenciesConcrete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C699C6B20DE902800E9474F /* GetCryptoCurrenciesConcrete.swift */; };
+		2C75EBB9214E7EE900246DEE /* CreateUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C75EBB8214E7EE900246DEE /* CreateUserUseCase.swift */; };
+		2C75EBBB214E7FC200246DEE /* CreateUserConcrete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C75EBBA214E7FC200246DEE /* CreateUserConcrete.swift */; };
+		2C75EBBD214E806A00246DEE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C75EBBC214E806A00246DEE /* UserModel.swift */; };
 		2C7C5A8320E6276800B4C323 /* CryptoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7C5A8220E6276800B4C323 /* CryptoDetailViewController.swift */; };
 		2C9DDBD721369ACE002EB435 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C9DDBD621369ACD002EB435 /* GoogleService-Info.plist */; };
 		2CA453B4213539DC000862CA /* HTTPHelperClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA453B3213539DC000862CA /* HTTPHelperClass.swift */; };
@@ -84,6 +87,9 @@
 		2C3426A520E92D920020EA5A /* GetPriceMultiConcrete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPriceMultiConcrete.swift; sourceTree = "<group>"; };
 		2C4A8D2820E93512001CA705 /* PriceMultiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceMultiModel.swift; sourceTree = "<group>"; };
 		2C699C6B20DE902800E9474F /* GetCryptoCurrenciesConcrete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCryptoCurrenciesConcrete.swift; sourceTree = "<group>"; };
+		2C75EBB8214E7EE900246DEE /* CreateUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserUseCase.swift; sourceTree = "<group>"; };
+		2C75EBBA214E7FC200246DEE /* CreateUserConcrete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserConcrete.swift; sourceTree = "<group>"; };
+		2C75EBBC214E806A00246DEE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		2C7C5A8220E6276800B4C323 /* CryptoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailViewController.swift; sourceTree = "<group>"; };
 		2C9DDBD621369ACD002EB435 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2CA453B3213539DC000862CA /* HTTPHelperClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHelperClass.swift; sourceTree = "<group>"; };
@@ -301,6 +307,7 @@
 				2CCF389920C831ED0094C06A /* CryptoModel.swift */,
 				2CCF389B20C835010094C06A /* ExchangeModel.swift */,
 				2C4A8D2820E93512001CA705 /* PriceMultiModel.swift */,
+				2C75EBBC214E806A00246DEE /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -311,6 +318,7 @@
 				2CCF389620C8235C0094C06A /* GetCurrencies.swift */,
 				2CD9CA8420CA873E001F43E4 /* GetExchanges.swift */,
 				2C34269D20E928F70020EA5A /* GetPriceMulti.swift */,
+				2C75EBB8214E7EE900246DEE /* CreateUserUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -342,6 +350,7 @@
 				2CD9CA8B20CAAF31001F43E4 /* GetCurrenciesConcrete.swift */,
 				2C699C6B20DE902800E9474F /* GetCryptoCurrenciesConcrete.swift */,
 				2C3426A520E92D920020EA5A /* GetPriceMultiConcrete.swift */,
+				2C75EBBA214E7FC200246DEE /* CreateUserConcrete.swift */,
 			);
 			path = UseCasesConcrete;
 			sourceTree = "<group>";
@@ -594,9 +603,11 @@
 				2CCF389720C8235C0094C06A /* GetCurrencies.swift in Sources */,
 				2C2041D621369FDC008E4CA8 /* CreateAccountViewModel.swift in Sources */,
 				2CD9CA8720CA87A6001F43E4 /* ExchangeParser.swift in Sources */,
+				2C75EBBD214E806A00246DEE /* UserModel.swift in Sources */,
 				2CCF389A20C831ED0094C06A /* CryptoModel.swift in Sources */,
 				2CD9CA8520CA873E001F43E4 /* GetExchanges.swift in Sources */,
 				2CD9CA8C20CAAF31001F43E4 /* GetCurrenciesConcrete.swift in Sources */,
+				2C75EBB9214E7EE900246DEE /* CreateUserUseCase.swift in Sources */,
 				2C3426A020E929470020EA5A /* PriceMultiParser.swift in Sources */,
 				2CCF386320C817A70094C06A /* AppDelegate.swift in Sources */,
 				2C34269C20E800C80020EA5A /* CryptoDetailViewModel.swift in Sources */,
@@ -608,6 +619,7 @@
 				2C2041DC2136A17D008E4CA8 /* FirebaseHelperClass.swift in Sources */,
 				2C2041DA2136A035008E4CA8 /* LoginViewModel.swift in Sources */,
 				2CB9CF2820D8F3A500E28AAE /* CryptoParserCryptoCompare.swift in Sources */,
+				2C75EBBB214E7FC200246DEE /* CreateUserConcrete.swift in Sources */,
 				2CB9CF2620D7B95400E28AAE /* MainViewTableViewCell.swift in Sources */,
 				2C3426A620E92D920020EA5A /* GetPriceMultiConcrete.swift in Sources */,
 				2CB9CF2D20D941EE00E28AAE /* Extensions.swift in Sources */,
@@ -793,7 +805,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JNHBJ3JE68;
 				INFOPLIST_FILE = ZenTik/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.za.wodwo.ZenTik;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -809,7 +824,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JNHBJ3JE68;
 				INFOPLIST_FILE = ZenTik/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.za.wodwo.ZenTik;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -826,7 +844,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JNHBJ3JE68;
 				INFOPLIST_FILE = ZenTikTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.za.wodwo.ZenTikTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -844,7 +866,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JNHBJ3JE68;
 				INFOPLIST_FILE = ZenTikTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.za.wodwo.ZenTikTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -861,7 +887,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JNHBJ3JE68;
 				INFOPLIST_FILE = ZenTikUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.za.wodwo.ZenTikUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -878,7 +908,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JNHBJ3JE68;
 				INFOPLIST_FILE = ZenTikUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.za.wodwo.ZenTikUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
