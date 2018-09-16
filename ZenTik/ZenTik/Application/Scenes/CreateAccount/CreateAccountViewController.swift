@@ -30,13 +30,34 @@ class CreateAccountViewController: UIViewController {
     
     @IBAction func createTheUser(_ sender: UIButton) {
         
+        textInputControl()
+    }
+    
+    private func textInputControl(){
+        
+        guard let username = userNameTextField.text, username.count > 1 else {
+
+            alertController(message: "Please make sure you have entered a username.")
+            return
+        }
+        
+        guard let email = emailTextField.text, email.count > 1, email.contains("@") else {
+
+            alertController(message: "Please make sure you have entered a valid email address.")
+            return
+        }
+        
+        guard let password = passwordTextField.text, password.count >= 6 else{
+
+            alertController(message: "Please make sure you have entered a six or more character password.")
+            return
+        }
+        
         loadingIndicator()
         
-        let userData = textControl()
-        
-        self.viewModel = CreateAccountViewModel.init(userName: userData.0, email: userData.1, password: userData.2, createTheUser: self.createUser, completionHandler: { result in
+        self.viewModel = CreateAccountViewModel.init(userName: username, email: email, password: password, createTheUser: self.createUser, completionHandler: { result in
             
-            if(result == userData.1){
+            if(result == email){
                 self.dismiss(animated: true, completion: nil)
                 
                 let alert = UIAlertController(title: "SUCCESS", message: "Great! Your email address \(String(describing: result)) has been successfully registered.", preferredStyle: UIAlertControllerStyle.alert)
@@ -50,31 +71,9 @@ class CreateAccountViewController: UIViewController {
                 self.present(alert, animated: true, completion: nil)
             }else{
                 self.dismiss(animated: true, completion: nil)
-                self.alertController(message: result)
+                self.alertController(message: "\(result) Please try again.")
             }
         })
-    }
-    
-    private func textControl() -> (String,String,String){
-        
-        guard let username = userNameTextField.text else {
-            
-            alertController(message: "Please make sure you have entered all your information.")
-            return ("nil","nil","nil")
-        }
-        
-        guard let email = emailTextField.text else {
-            
-            alertController(message: "Please make sure you have entered all your information.")
-            return ("nil","nil","nil")
-        }
-        
-        guard let password = passwordTextField.text else {
-            
-            alertController(message: "Please make sure you have entered all your information.")
-            return ("nil","nil","nil")
-        }
-        return (username,email,password)
     }
     
     
