@@ -19,7 +19,7 @@ final public class CreateAccountViewModel{
             
             self.model = userModel
             
-            if(userModel.userUniqueID?.isEmpty)!{
+            if(self.model.userUniqueID?.isEmpty)!{
                 completionHandler(self.model.error!)
             }else{
                  completionHandler(self.model.email!)

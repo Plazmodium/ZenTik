@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2C0FC3C520E57299007DCFA3 /* TextFieldBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0FC3C420E57299007DCFA3 /* TextFieldBinding.swift */; };
+		2C1A0C8921517AED004625B2 /* LoginUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1A0C8821517AED004625B2 /* LoginUserUseCase.swift */; };
+		2C1A0C8B21517B97004625B2 /* LoginUserConcrete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1A0C8A21517B97004625B2 /* LoginUserConcrete.swift */; };
 		2C2041D421369F8E008E4CA8 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2041D321369F8E008E4CA8 /* CreateAccountViewController.swift */; };
 		2C2041D621369FDC008E4CA8 /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2041D521369FDC008E4CA8 /* CreateAccountViewModel.swift */; };
 		2C2041D821369FEE008E4CA8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2041D721369FEE008E4CA8 /* LoginViewController.swift */; };
@@ -75,6 +77,8 @@
 		14F6FB7EB4D994C050631C34 /* Pods_ZenTik.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZenTik.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B8F217CD9778C3332DAC4DB /* Pods-ZenTikUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZenTikUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZenTikUITests/Pods-ZenTikUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2C0FC3C420E57299007DCFA3 /* TextFieldBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldBinding.swift; sourceTree = "<group>"; };
+		2C1A0C8821517AED004625B2 /* LoginUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserUseCase.swift; sourceTree = "<group>"; };
+		2C1A0C8A21517B97004625B2 /* LoginUserConcrete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserConcrete.swift; sourceTree = "<group>"; };
 		2C2041D321369F8E008E4CA8 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		2C2041D521369FDC008E4CA8 /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
 		2C2041D721369FEE008E4CA8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -319,6 +323,7 @@
 				2CD9CA8420CA873E001F43E4 /* GetExchanges.swift */,
 				2C34269D20E928F70020EA5A /* GetPriceMulti.swift */,
 				2C75EBB8214E7EE900246DEE /* CreateUserUseCase.swift */,
+				2C1A0C8821517AED004625B2 /* LoginUserUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -351,6 +356,7 @@
 				2C699C6B20DE902800E9474F /* GetCryptoCurrenciesConcrete.swift */,
 				2C3426A520E92D920020EA5A /* GetPriceMultiConcrete.swift */,
 				2C75EBBA214E7FC200246DEE /* CreateUserConcrete.swift */,
+				2C1A0C8A21517B97004625B2 /* LoginUserConcrete.swift */,
 			);
 			path = UseCasesConcrete;
 			sourceTree = "<group>";
@@ -593,6 +599,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C1A0C8B21517B97004625B2 /* LoginUserConcrete.swift in Sources */,
 				2C2041D821369FEE008E4CA8 /* LoginViewController.swift in Sources */,
 				2C3426A220E92A920020EA5A /* GetPriceMultiCryptoCompare.swift in Sources */,
 				2C7C5A8320E6276800B4C323 /* CryptoDetailViewController.swift in Sources */,
@@ -623,6 +630,7 @@
 				2CB9CF2620D7B95400E28AAE /* MainViewTableViewCell.swift in Sources */,
 				2C3426A620E92D920020EA5A /* GetPriceMultiConcrete.swift in Sources */,
 				2CB9CF2D20D941EE00E28AAE /* Extensions.swift in Sources */,
+				2C1A0C8921517AED004625B2 /* LoginUserUseCase.swift in Sources */,
 				2CD9CA8220CA7D25001F43E4 /* CryptoParser.swift in Sources */,
 				2C0FC3C520E57299007DCFA3 /* TextFieldBinding.swift in Sources */,
 				2CCF389520C8216A0094C06A /* MainViewModel.swift in Sources */,
