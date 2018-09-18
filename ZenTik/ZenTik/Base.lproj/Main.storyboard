@@ -297,10 +297,10 @@
             </objects>
             <point key="canvasLocation" x="870" y="115"/>
         </scene>
-        <!--View Controller-->
+        <!--Landing View Controller-->
         <scene sceneID="BaS-67-QiO">
             <objects>
-                <viewController id="trr-uF-YGf" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LandingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="trr-uF-YGf" customClass="LandingViewController" customModule="ZenTik" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jyG-ld-6Ii">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
