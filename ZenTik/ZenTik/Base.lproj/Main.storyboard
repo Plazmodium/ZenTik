@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9fP-rX-KSp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9fP-rX-KSp">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ZenTik" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="viewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="ZenTik" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,13 +44,13 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crypto Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KkT-50-2AH">
-                                                            <rect key="frame" x="92" y="8" width="213" height="24"/>
+                                                            <rect key="frame" x="92" y="7.9999999999999982" width="213" height="25.333333333333329"/>
                                                             <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="19"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symbol:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcZ-Py-BTB">
-                                                            <rect key="frame" x="92" y="40" width="45" height="15"/>
+                                                            <rect key="frame" x="92" y="41.333333333333336" width="45" height="15"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="15" id="emW-jb-2jS"/>
                                                             </constraints>
@@ -61,7 +59,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Algorithm:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdK-e9-Gx6">
-                                                            <rect key="frame" x="92" y="63" width="58" height="15"/>
+                                                            <rect key="frame" x="92" y="64.333333333333329" width="58" height="15"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="15" id="jlq-Ni-iLd"/>
                                                             </constraints>
@@ -70,19 +68,19 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symbol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYK-5h-atO">
-                                                            <rect key="frame" x="155.66666666666663" y="40" width="149.33333333333337" height="14.333333333333336"/>
+                                                            <rect key="frame" x="154.66666666666663" y="41.333333333333336" width="150.33333333333337" height="14.333333333333336"/>
                                                             <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Algo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGu-QO-g8K">
-                                                            <rect key="frame" x="155.66666666666663" y="63.000000000000007" width="149.33333333333337" height="14.333333333333336"/>
+                                                            <rect key="frame" x="154.66666666666663" y="64.333333333333329" width="150.33333333333337" height="14.333333333333329"/>
                                                             <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="10"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProofType:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqd-Uh-D7Y">
-                                                            <rect key="frame" x="92" y="86" width="61" height="15"/>
+                                                            <rect key="frame" x="92" y="87.333333333333329" width="61" height="15"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="15" id="Q2D-oa-gfo"/>
                                                             </constraints>
@@ -91,7 +89,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PoT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jhe-1X-wxk">
-                                                            <rect key="frame" x="155.66666666666663" y="86" width="149.33333333333337" height="15"/>
+                                                            <rect key="frame" x="154.66666666666663" y="87.333333333333329" width="150.33333333333337" height="14.333333333333329"/>
                                                             <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -127,7 +125,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fully Premined" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMX-Xf-0ZS">
-                                                            <rect key="frame" x="155.66666666666663" y="114" width="149.33333333333337" height="11.666666666666671"/>
+                                                            <rect key="frame" x="154.66666666666663" y="114.66666666666667" width="150.33333333333337" height="10.666666666666671"/>
                                                             <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -139,31 +137,31 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Coin Supply" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Rx-D3-5HA">
-                                                            <rect key="frame" x="155.66666666666663" y="160" width="149.33333333333337" height="11.666666666666657"/>
+                                                            <rect key="frame" x="154.66666666666663" y="160.66666666666666" width="150.33333333333337" height="10.666666666666657"/>
                                                             <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Coins Free-floating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qc8-m1-rMR">
-                                                            <rect key="frame" x="155.66666666666663" y="183" width="150.33333333333337" height="11.666666666666657"/>
+                                                            <rect key="frame" x="154.66666666666663" y="183.66666666666666" width="150.33333333333337" height="10.666666666666657"/>
                                                             <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sponsored" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1O-YU-rwd">
-                                                            <rect key="frame" x="155.66666666666663" y="206" width="149.33333333333337" height="11.666666666666657"/>
+                                                            <rect key="frame" x="154.66666666666663" y="206.66666666666666" width="150.33333333333337" height="10.666666666666657"/>
                                                             <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2o3-7W-ZhQ">
-                                                            <rect key="frame" x="155.66666666666663" y="229" width="149.33333333333337" height="11.666666666666657"/>
+                                                            <rect key="frame" x="154.66666666666663" y="229.66666666666666" width="150.33333333333337" height="10.666666666666657"/>
                                                             <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Premined Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Euj-EU-l2l">
-                                                            <rect key="frame" x="155.66666666666663" y="137" width="149.33333333333337" height="11.666666666666657"/>
+                                                            <rect key="frame" x="154.66666666666663" y="137.66666666666666" width="150.33333333333337" height="10.666666666666657"/>
                                                             <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -297,12 +295,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="870" y="115"/>
+            <point key="canvasLocation" x="887" y="115"/>
         </scene>
-        <!--View Controller-->
+        <!--Landing View Controller-->
         <scene sceneID="BaS-67-QiO">
             <objects>
-                <viewController id="trr-uF-YGf" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LandingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="trr-uF-YGf" customClass="LandingViewController" customModule="ZenTik" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jyG-ld-6Ii">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -359,10 +357,10 @@
             </objects>
             <point key="canvasLocation" x="-511" y="115"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Account View Controller-->
         <scene sceneID="DlX-EA-Pjc">
             <objects>
-                <viewController id="aqN-xu-LEl" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateAccountViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aqN-xu-LEl" customClass="CreateAccountViewController" customModule="ZenTik" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tZQ-et-MLt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -385,7 +383,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kindly enter a username, a valid email address and a eight character password, and you'll be set to go." lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qb-S0-3rR">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kindly enter a username, a valid email address and a six character password, and you'll be set to go." lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qb-S0-3rR">
                                         <rect key="frame" x="8" y="100" width="359" height="81"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
@@ -413,20 +411,29 @@
                                 <rect key="frame" x="16" y="572" width="343" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="createTheUser:" destination="aqN-xu-LEl" eventType="touchUpInside" id="Qag-bk-Y2V"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gtX-cZ-x3b"/>
                     </view>
+                    <connections>
+                        <outlet property="createBtn" destination="fMT-NG-ARF" id="Yn2-GD-1bd"/>
+                        <outlet property="emailTextField" destination="0Ea-Pg-xyr" id="wLO-p2-3Kr"/>
+                        <outlet property="passwordTextField" destination="FkU-nY-JAx" id="Shu-2D-SHh"/>
+                        <outlet property="userNameTextField" destination="nZK-YU-HpN" id="oCB-oq-oU9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l6t-mY-LfU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="869.60000000000002" y="-709.35960591133005"/>
+            <point key="canvasLocation" x="284" y="-765"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="qfF-Ha-rfs">
             <objects>
-                <viewController id="vIU-Ye-QnT" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vIU-Ye-QnT" customClass="LoginViewController" customModule="ZenTik" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GiW-Ib-bPi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -452,7 +459,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Lf-oi-6FA">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Lf-oi-6FA">
                                 <rect key="frame" x="16" y="335" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -470,15 +477,22 @@
                                 <rect key="frame" x="16" y="565" width="343" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Enter"/>
+                                <connections>
+                                    <action selector="loginUser:" destination="vIU-Ye-QnT" eventType="touchUpInside" id="GmU-S9-YpT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vRN-vm-FJQ"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextView" destination="9Lf-oi-6FA" id="Fbz-Ro-P7g"/>
+                        <outlet property="passwordTextView" destination="JJT-cv-ySJ" id="H0p-Xp-raR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wEB-0m-t2P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1645.5999999999999" y="-708.62068965517244"/>
+            <point key="canvasLocation" x="1457" y="-766"/>
         </scene>
         <!--Crypto Detail View Controller-->
         <scene sceneID="ghy-Gr-hP7">
@@ -664,7 +678,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SJ1-qp-lby" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1646" y="115"/>
+            <point key="canvasLocation" x="1865" y="115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tBm-Sp-hSv">
@@ -674,7 +688,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="D2d-zY-k9O">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.81174361737400536" green="0.0016417618285250951" blue="0.014321916958986679" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.8666666666666667" green="0.63529411764705879" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
