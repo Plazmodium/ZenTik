@@ -24,7 +24,6 @@ class LandingViewController: UIViewController {
                 self.navigationController?.pushViewController(newViewController, animated: true)
             }
         }
-        
     }
     
     override func viewDidLoad() {
