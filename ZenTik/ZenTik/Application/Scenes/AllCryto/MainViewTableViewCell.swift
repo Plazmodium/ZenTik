@@ -27,7 +27,7 @@ class MainViewTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         theDataView.layer.cornerRadius = 10.0
-        theDataView.layer.shadowColor = UIColor.black.cgColor
+        theDataView.layer.shadowColor = UIColor(red: 237/255, green: 23/255, blue: 141/255, alpha: 1).cgColor//UIColor.black.cgColor
         theDataView.layer.shadowOffset = CGSize(width: 0, height: 1)
         theDataView.layer.shadowOpacity = 1
         theDataView.layer.shadowRadius = 1.0
@@ -37,7 +37,8 @@ class MainViewTableViewCell: UITableViewCell {
         cryptoImage.layer.shadowOffset = CGSize(width: 0, height: 1)
         cryptoImage.layer.shadowOpacity = 1
         cryptoImage.layer.shadowRadius = 1.0
-        cryptoImage.clipsToBounds = false
+        cryptoImage.clipsToBounds = true
+        cryptoImage.layer.cornerRadius = 10
         
         // Initialization code
     }

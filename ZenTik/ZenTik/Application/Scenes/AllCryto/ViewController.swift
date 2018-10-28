@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
@@ -18,6 +19,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             searchBar.delegate = self
         }
     }
+    @IBOutlet weak var rightSideBarButtonItem: UIBarButtonItem!
     
     //MARK: PROPERTIES
     var getCryptoCurrenciesUseCase = GetCryptoCurrenciesConcrete()
@@ -35,9 +37,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if(Auth.auth().currentUser == nil){
+            self.rightSideBarButtonItem.title = "Register"
+        }
+        
         //setup tableview delegates
         self.cryptoTableView.delegate = self
         self.cryptoTableView.dataSource = self
+        
+        self.searchBar.backgroundColor = UIColor.clear
+        self.searchBar.isTranslucent = true
     }
     
     func launchNetworkCall() {
@@ -140,6 +149,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         return height
     }
+    
+    @IBAction func logoutToolbarBTN(_ sender: UIBarButtonItem) {
+        
+        if(Auth.auth().currentUser != nil){
+           try? Auth.auth().signOut()
+            
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let toLandingVC = storyBoard.instantiateViewController(withIdentifier: "LandingViewController") as! LandingViewController
+            self.show(toLandingVC, sender: nil)
+        }else{
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let toLandingVC = storyBoard.instantiateViewController(withIdentifier: "LandingViewController") as! LandingViewController
+            self.show(toLandingVC, sender: nil)
+        }
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -7,14 +7,30 @@
 //
 
 import UIKit
+import AVFoundation
 import FirebaseAuth
 
 class LandingViewController: UIViewController {
     
+    @IBOutlet weak var createAccountBTN: UIButton!{
+        didSet{
+            createAccountBTN.titleLabel?.font = UIFont(name: "bitwise", size: UIFont.buttonFontSize)
+        }
+    }
+    
+    @IBOutlet weak var signInBTN: UIButton!
+    
+    @IBOutlet weak var skipBTN: UIButton!
+    
     //PROPERTIES
+    var avPlayer: AVPlayer!
+    var avPlayerLayer: AVPlayerLayer!
+    var paused: Bool = false
     var handle: AuthStateDidChangeListenerHandle!
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        self.navigationItem.hidesBackButton = true
         
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in
             
@@ -26,8 +42,48 @@ class LandingViewController: UIViewController {
         }
     }
     
+    private func createVideo(){
+        
+        let theURL = Bundle.main.url(forResource:"Bellergy_videvo", withExtension: "mp4")
+        
+        avPlayer = AVPlayer(url: theURL!)
+        avPlayerLayer = AVPlayerLayer(player: avPlayer)
+        avPlayerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        avPlayer.volume = 0
+        avPlayer.actionAtItemEnd = .none
+        
+        avPlayerLayer.frame = view.layer.bounds
+        view.backgroundColor = .clear
+        view.layer.insertSublayer(avPlayerLayer, at: 0)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(playerItemDidReachEnd(notification:)),
+                                               name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
+                                               object: avPlayer.currentItem)
+        
+    }
+    
+    @objc func playerItemDidReachEnd(notification: Notification) {
+        let p: AVPlayerItem = notification.object as! AVPlayerItem
+        p.seek(to: kCMTimeZero, completionHandler: nil)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        avPlayer.play()
+        paused = false
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        avPlayer.pause()
+        paused = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        createVideo()
         
     }
     

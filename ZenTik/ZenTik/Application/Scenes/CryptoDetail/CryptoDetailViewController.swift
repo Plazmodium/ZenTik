@@ -14,7 +14,7 @@ class CryptoDetailViewController: UIViewController {
     
     @IBOutlet weak var contentUIView: UIView!{
         didSet{
-            contentUIView.layer.shadowColor = UIColor.white.cgColor
+            contentUIView.layer.shadowColor = UIColor(red: 237/255, green: 23/255, blue: 141/255, alpha: 1).cgColor
             contentUIView.layer.shadowOffset = CGSize(width: 0, height: 1)
             contentUIView.layer.shadowOpacity = 1
             contentUIView.layer.shadowRadius = 1.0
@@ -24,26 +24,26 @@ class CryptoDetailViewController: UIViewController {
         
     @IBOutlet weak var newsBtnUIView1: UIView!{
         didSet{
-            newsBtnUIView1.addInnerShadow(topColor: UIColor.lightGray)
+            newsBtnUIView1.addInnerShadow(topColor: UIColor(red: 237/255, green: 23/255, blue: 141/255, alpha: 1))
         }
     }
     @IBOutlet weak var newsBTN1: UIButton!
 
     @IBOutlet weak var NewsBtnUIView2: UIView!{
         didSet{
-            NewsBtnUIView2.addInnerShadow(topColor: UIColor.lightGray)
+            NewsBtnUIView2.addInnerShadow(topColor: UIColor(red: 237/255, green: 23/255, blue: 141/255, alpha: 1))
         }
     }
     
     @IBOutlet weak var newsBtnUIView3: UIView!{
         didSet{
-            newsBtnUIView3.addInnerShadow(topColor: UIColor.lightGray)
+            newsBtnUIView3.addInnerShadow(topColor: UIColor(red: 237/255, green: 23/255, blue: 141/255, alpha: 1))
         }
     }
     
     @IBOutlet weak var basicContentUIViw: UIView!{
         didSet{
-            basicContentUIViw.layer.shadowColor = UIColor.white.cgColor
+            basicContentUIViw.layer.shadowColor = UIColor(red: 237/255, green: 23/255, blue: 141/255, alpha: 1).cgColor
             basicContentUIViw.layer.shadowOffset = CGSize(width: 0, height: 1)
             basicContentUIViw.layer.shadowOpacity = 1
             basicContentUIViw.layer.shadowRadius = 1.0
@@ -53,7 +53,7 @@ class CryptoDetailViewController: UIViewController {
     
     @IBOutlet weak var imageUIView: UIView!{
         didSet{
-            imageUIView.layer.shadowColor = UIColor.white.cgColor
+            imageUIView.layer.shadowColor = UIColor(red: 237/255, green: 23/255, blue: 141/255, alpha: 1).cgColor
             imageUIView.layer.shadowOffset = CGSize(width: 0, height: 1)
             imageUIView.layer.shadowOpacity = 1
             imageUIView.layer.shadowRadius = 1.0
@@ -68,6 +68,7 @@ class CryptoDetailViewController: UIViewController {
     
     @IBOutlet weak var coinUIImage: UIImageView!{
         didSet{
+            coinUIImage.layer.shadowColor = UIColor(red: 237/255, green: 23/255, blue: 141/255, alpha: 1).cgColor
             coinUIImage.clipsToBounds = true
             coinUIImage.layer.cornerRadius = 10.0
         }

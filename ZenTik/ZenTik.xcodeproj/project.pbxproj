@@ -29,6 +29,14 @@
 		2C75EBBB214E7FC200246DEE /* CreateUserConcrete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C75EBBA214E7FC200246DEE /* CreateUserConcrete.swift */; };
 		2C75EBBD214E806A00246DEE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C75EBBC214E806A00246DEE /* UserModel.swift */; };
 		2C7C5A8320E6276800B4C323 /* CryptoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7C5A8220E6276800B4C323 /* CryptoDetailViewController.swift */; };
+		2C92CADF2184B935008FA716 /* PressStart2P.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C92CADB2184B934008FA716 /* PressStart2P.ttf */; };
+		2C92CAE02184B935008FA716 /* bitwise.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C92CADC2184B934008FA716 /* bitwise.ttf */; };
+		2C92CAE12184B935008FA716 /* Ticketing.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C92CADD2184B934008FA716 /* Ticketing.ttf */; };
+		2C92CAE22184B935008FA716 /* TIFAX text.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C92CADE2184B935008FA716 /* TIFAX text.ttf */; };
+		2C92CAE32185C6A9008FA716 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CCF386920C817A80094C06A /* Assets.xcassets */; };
+		2C92CAE52185C764008FA716 /* Bellergy_videvo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2C92CAE42185C764008FA716 /* Bellergy_videvo.mp4 */; };
+		2C92CAE72186127E008FA716 /* AllCryptoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92CAE62186127D008FA716 /* AllCryptoCollectionViewController.swift */; };
+		2C92CAE92186190C008FA716 /* AllCryptoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92CAE82186190C008FA716 /* AllCryptoCollectionViewCell.swift */; };
 		2C9DDBD721369ACE002EB435 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C9DDBD621369ACD002EB435 /* GoogleService-Info.plist */; };
 		2CA453B4213539DC000862CA /* HTTPHelperClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA453B3213539DC000862CA /* HTTPHelperClass.swift */; };
 		2CB9CF2620D7B95400E28AAE /* MainViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9CF2520D7B95400E28AAE /* MainViewTableViewCell.swift */; };
@@ -38,7 +46,6 @@
 		2CCF386320C817A70094C06A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF386220C817A70094C06A /* AppDelegate.swift */; };
 		2CCF386520C817A70094C06A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF386420C817A70094C06A /* ViewController.swift */; };
 		2CCF386820C817A70094C06A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CCF386620C817A70094C06A /* Main.storyboard */; };
-		2CCF386A20C817A80094C06A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CCF386920C817A80094C06A /* Assets.xcassets */; };
 		2CCF386D20C817A80094C06A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CCF386B20C817A80094C06A /* LaunchScreen.storyboard */; };
 		2CCF387820C817A80094C06A /* ZenTikTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF387720C817A80094C06A /* ZenTikTests.swift */; };
 		2CCF388320C817A80094C06A /* ZenTikUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF388220C817A80094C06A /* ZenTikUITests.swift */; };
@@ -97,6 +104,13 @@
 		2C75EBBA214E7FC200246DEE /* CreateUserConcrete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserConcrete.swift; sourceTree = "<group>"; };
 		2C75EBBC214E806A00246DEE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		2C7C5A8220E6276800B4C323 /* CryptoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailViewController.swift; sourceTree = "<group>"; };
+		2C92CADB2184B934008FA716 /* PressStart2P.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PressStart2P.ttf; sourceTree = "<group>"; };
+		2C92CADC2184B934008FA716 /* bitwise.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bitwise.ttf; sourceTree = "<group>"; };
+		2C92CADD2184B934008FA716 /* Ticketing.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ticketing.ttf; sourceTree = "<group>"; };
+		2C92CADE2184B935008FA716 /* TIFAX text.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TIFAX text.ttf"; sourceTree = "<group>"; };
+		2C92CAE42185C764008FA716 /* Bellergy_videvo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bellergy_videvo.mp4; sourceTree = "<group>"; };
+		2C92CAE62186127D008FA716 /* AllCryptoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCryptoCollectionViewController.swift; sourceTree = "<group>"; };
+		2C92CAE82186190C008FA716 /* AllCryptoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCryptoCollectionViewCell.swift; sourceTree = "<group>"; };
 		2C9DDBD621369ACD002EB435 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2CA453B3213539DC000862CA /* HTTPHelperClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHelperClass.swift; sourceTree = "<group>"; };
 		2CB9CF2520D7B95400E28AAE /* MainViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewTableViewCell.swift; sourceTree = "<group>"; };
@@ -195,6 +209,8 @@
 				2CCF386420C817A70094C06A /* ViewController.swift */,
 				2CCF389420C8216A0094C06A /* MainViewModel.swift */,
 				2CB9CF2520D7B95400E28AAE /* MainViewTableViewCell.swift */,
+				2C92CAE62186127D008FA716 /* AllCryptoCollectionViewController.swift */,
+				2C92CAE82186190C008FA716 /* AllCryptoCollectionViewCell.swift */,
 			);
 			path = AllCryto;
 			sourceTree = "<group>";
@@ -206,6 +222,18 @@
 				2C34269B20E800C80020EA5A /* CryptoDetailViewModel.swift */,
 			);
 			path = CryptoDetail;
+			sourceTree = "<group>";
+		};
+		2C92CADA2184B928008FA716 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2C92CADC2184B934008FA716 /* bitwise.ttf */,
+				2C92CADB2184B934008FA716 /* PressStart2P.ttf */,
+				2C92CADD2184B934008FA716 /* Ticketing.ttf */,
+				2C92CADE2184B935008FA716 /* TIFAX text.ttf */,
+			);
+			name = Fonts;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		2CB9CF2B20D941D700E28AAE /* Utils */ = {
@@ -222,6 +250,7 @@
 		2CCF385620C817A70094C06A = {
 			isa = PBXGroup;
 			children = (
+				2C92CAE42185C764008FA716 /* Bellergy_videvo.mp4 */,
 				2CCF386120C817A70094C06A /* ZenTik */,
 				2CCF387620C817A80094C06A /* ZenTikTests */,
 				2CCF388120C817A80094C06A /* ZenTikUITests */,
@@ -244,6 +273,7 @@
 		2CCF386120C817A70094C06A /* ZenTik */ = {
 			isa = PBXGroup;
 			children = (
+				2C92CADA2184B928008FA716 /* Fonts */,
 				2CCF389220C81AA00094C06A /* Application */,
 				2CCF389120C81A920094C06A /* Platform */,
 				2CCF389020C81A840094C06A /* Domain */,
@@ -503,9 +533,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C92CAE52185C764008FA716 /* Bellergy_videvo.mp4 in Resources */,
+				2C92CAE02184B935008FA716 /* bitwise.ttf in Resources */,
 				2CCF386D20C817A80094C06A /* LaunchScreen.storyboard in Resources */,
+				2C92CAE12184B935008FA716 /* Ticketing.ttf in Resources */,
 				2C9DDBD721369ACE002EB435 /* GoogleService-Info.plist in Resources */,
-				2CCF386A20C817A80094C06A /* Assets.xcassets in Resources */,
+				2C92CADF2184B935008FA716 /* PressStart2P.ttf in Resources */,
+				2C92CAE22184B935008FA716 /* TIFAX text.ttf in Resources */,
+				2C92CAE32185C6A9008FA716 /* Assets.xcassets in Resources */,
 				2CCF386820C817A70094C06A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,12 +649,14 @@
 				2C2041D821369FEE008E4CA8 /* LoginViewController.swift in Sources */,
 				2C3426A220E92A920020EA5A /* GetPriceMultiCryptoCompare.swift in Sources */,
 				2C7C5A8320E6276800B4C323 /* CryptoDetailViewController.swift in Sources */,
+				2C92CAE72186127E008FA716 /* AllCryptoCollectionViewController.swift in Sources */,
 				2CD9CA8A20CAACA0001F43E4 /* GetAssetsNetwork.swift in Sources */,
 				2CA453B4213539DC000862CA /* HTTPHelperClass.swift in Sources */,
 				2CCF386520C817A70094C06A /* ViewController.swift in Sources */,
 				2CB9CF2A20D900E800E28AAE /* GetAssetsCryptoCompare.swift in Sources */,
 				2CCF389720C8235C0094C06A /* GetCurrencies.swift in Sources */,
 				2C2041D621369FDC008E4CA8 /* CreateAccountViewModel.swift in Sources */,
+				2C92CAE92186190C008FA716 /* AllCryptoCollectionViewCell.swift in Sources */,
 				2CD9CA8720CA87A6001F43E4 /* ExchangeParser.swift in Sources */,
 				2C75EBBD214E806A00246DEE /* UserModel.swift in Sources */,
 				2CCF389A20C831ED0094C06A /* CryptoModel.swift in Sources */,
